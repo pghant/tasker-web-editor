@@ -13,20 +13,20 @@ const initialState = fromJS({
 export default function base(state = initialState, action) {
   switch (action.type) {
     case ADD_PROJECT:
-      let newId = state.get("projects").max() + 1;
+      let newProjId = state.get("projects").max() + 1;
       return state.mergeDeep({
         projectsById: {
-          [newId]: { id: newId, name: action.name }
+          [newProjId]: { id: newProjId, name: action.name }
         },
-        projects: state.get("projects").push(newId)
+        projects: state.get("projects").push(newProjId)
       });
     case ADD_PROFILE:
-      let newId = state.get("profiles").count() === 0 ? 0 : state.get("profiles").max() + 1;
+      let newProfId = state.get("profiles").count() === 0 ? 0 : state.get("profiles").max() + 1;
       return state.mergeDeep({
         profilesById: {
-          [newId]: { id: newId, name: action.name }
+          [newProfId]: { id: newProfId, name: action.name }
         },
-        profiles: state.get("profiles").push(newId)
+        profiles: state.get("profiles").push(newProfId)
       });
     default:
       return state;
