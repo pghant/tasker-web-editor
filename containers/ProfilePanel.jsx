@@ -4,38 +4,27 @@ import Subheader from "material-ui/Subheader";
 import FlatButton from "material-ui/FlatButton";
 import TextField from "material-ui/TextField";
 import Dialog from "material-ui/Dialog";
+import Paper from "material-ui/Paper";
 import { List, ListItem } from "material-ui/List";
+import ListPanel from "../components/ListPanel";
 import { List as ImmList, Map } from "immutable";
 import { addProfile } from "../actions/base";
 
 class ProfilePanel extends Component {
   render() {
-    return (
-      <List>
-        <Subheader>Profiles</Subheader>
-        {
-          if (this.props.profiles.count() > 0) {
-            this.props.profiles.map(profile =>
-              <ListItem key={profile.get("id")}>{profile.get("name")}</ListItem>
-            )
-          } else {
-            <div>No profiles added</div>
-          }
-        }
-      </List>
-    );
+    return <ListPanel listItems={this.props.profiles} listTitle="Profiles" emptyMessage="No profiles added" />;
   }
 }
 
 ProfilePanel.propTypes = {
-  profiles: PropTypes.instanceOf(List).isRequired,
+  profiles: PropTypes.instanceOf(ImmList).isRequired,
   onAddProfile: PropTypes.func.isRequired
 };
 
 function mapStateToProps(state) {
   let bState = state.base;
   return {
-    projects: bState.get("profiles").map(id => bState.getIn(["profilesById", `${id}`]))
+    profiles: bState.get("profiles").map(id => bState.getIn(["profilesById", `${id}`]))
   };
 }
 
