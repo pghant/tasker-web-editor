@@ -20,6 +20,14 @@ export default function base(state = initialState, action) {
         },
         projects: state.get("projects").push(newId)
       });
+    case ADD_PROFILE:
+      let newId = state.get("profiles").count() === 0 ? 0 : state.get("profiles").max() + 1;
+      return state.mergeDeep({
+        profilesById: {
+          [newId]: { id: newId, name: action.name }
+        },
+        profiles: state.get("profiles").push(newId)
+      });
     default:
       return state;
   }
