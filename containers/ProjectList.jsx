@@ -23,10 +23,15 @@ class ProjectList extends Component {
     this.setState({ dialogOpen: false, dialogText: "" })
   }
 
+  addNewProject = () => {
+    this.props.onAddProject(this.state.dialogText);
+    this.handleClose();
+  }
+
   render() {
     const dialogActions = [
       <FlatButton label="Cancel" onTouchTap={this.handleClose} />,
-      <FlatButton label="Add" onTouchTap={() => { this.props.onAddProject(this.state.dialogText); this.handleClose(); }} primary={true} />
+      <FlatButton label="Add" onTouchTap={this.addNewProject} primary={true} />
     ];
     return (
       <div>
@@ -44,7 +49,12 @@ class ProjectList extends Component {
           </div>
         </Drawer>
         <Dialog title="Add New Project" modal={false} actions={dialogActions} open={this.state.dialogOpen} onRequestClose={this.handleClose}>
-          <TextField hintText="Project Name" value={this.state.dialogText} onChange={(e) => { this.setState({dialogText: e.target.value}); }} />
+          <TextField
+            ref={input => {if (input) input.focus();}}
+            style={{width: "100%"}}
+            hintText="Project Name" value={this.state.dialogText}
+            onKeyDown={e => { if (e.keyCode === 13) this.addNewProject(); } }
+            onChange={e => { this.setState({dialogText: e.target.value}); }} />
         </Dialog>
       </div>
     );
