@@ -5,7 +5,9 @@ const initialState = fromJS({
   projectsById: {
     0: { id: 0, name: "Base" }
   },
-  projects: [0]
+  projects: [0],
+  profilesById: {},
+  profiles: []
 });
 
 export default function base(state = initialState, action) {
