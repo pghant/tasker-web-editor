@@ -1,11 +1,5 @@
 import React, { PropTypes, Component } from "react";
 import { connect } from "react-redux";
-import Subheader from "material-ui/Subheader";
-import FlatButton from "material-ui/FlatButton";
-import TextField from "material-ui/TextField";
-import Dialog from "material-ui/Dialog";
-import Paper from "material-ui/Paper";
-import { List, ListItem } from "material-ui/List";
 import ListPanel from "../components/ListPanel";
 import { List as ImmList, Map } from "immutable";
 import { addProfile } from "../actions/base";
