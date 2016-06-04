@@ -7,12 +7,12 @@ import ProfilePanel from "../containers/ProfilePanel";
 const App = () => (
   <div>
     <AppBar title="Tasker Web Editor" showMenuIconButton={false} />
-    <div className="body" style={{position: "fixed", top: 65, bottom: 0, left: 0}}>
+    <div className="body" style={{position: "fixed", top: 65, bottom: 0, left: 0, right: 0}}>
       <ProjectList />
-      <ProfilePanel />
+      <div className="main" style={{position: "absolute", left: 256, right: 0}}>
+        <ProfilePanel />
+      </div>
     </div>
-    {/* <div style={{marginLeft: 300, width: 900}}>
-     </div>*/}
   </div>
 )
 

@@ -20,8 +20,7 @@ class ProjectList extends Component {
   };
 
   handleOpen = () => {
-    // this.setState({ dialogOpen: true });
-    this.props.onAddProject("Test");
+    this.setState({ dialogOpen: true });
   }
 
   handleClose = () => {
