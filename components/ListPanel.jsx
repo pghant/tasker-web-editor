@@ -14,7 +14,7 @@ class ListPanel extends Component {
     }
     let paperStyle = {
       width: "50%",
-      margin: 20,
+      margin: 28,
       height: "100%",
       display: "block"
     };
