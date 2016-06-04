@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from "react";
 import Paper from "material-ui/Paper";
+import { Toolbar, ToolbarGroup, ToolbarTitle } from "material-ui/Toolbar";
 import { List, ListItem } from "material-ui/List";
 import { List as ImmList, Map } from "immutable";
 
@@ -15,11 +16,15 @@ class ListPanel extends Component {
       width: "50%",
       margin: 20,
       height: "100%",
-      display: "block",
-      padding: 20
+      display: "block"
     };
     return (
       <Paper style={paperStyle}>
+        <Toolbar>
+          <ToolbarGroup firstChild={true}>
+            <ToolbarTitle text={this.props.listTitle} />
+          </ToolbarGroup>
+        </Toolbar>
         <List>
           <span style={{paddingBottom: 10, fontSize: "1.5em", display: "block"}}>{this.props.listTitle}</span>
           {message}
