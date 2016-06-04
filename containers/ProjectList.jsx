@@ -5,8 +5,6 @@ import Subheader from "material-ui/Subheader";
 import FlatButton from "material-ui/FlatButton";
 import TextField from "material-ui/TextField";
 import { List, ListItem } from "material-ui/List";
-import ActionAdd from "material-ui/svg-icons/content/add";
-import IconButton from "material-ui/IconButton";
 import Dialog from "material-ui/Dialog";
 import { List as ImmList, Map } from "immutable";
 import { addProject } from "../actions/base";

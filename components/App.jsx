@@ -1,5 +1,4 @@
-import React, { Component, PropTypes } from "react";
-import { connect } from "react-redux";
+import React from "react";
 import AppBar from "material-ui/AppBar";
 import ProjectList from "../containers/ProjectList";
 import ProfilePanel from "../containers/ProfilePanel";
