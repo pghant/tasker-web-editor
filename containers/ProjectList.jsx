@@ -11,6 +11,8 @@ import Dialog from "material-ui/Dialog";
 import { List as ImmList, Map } from "immutable";
 import { addProject } from "../actions/base";
 
+const ENTER_KEY_CODE = 13;
+
 class ProjectList extends Component {
   state = {
     dialogOpen: false,
@@ -18,7 +20,8 @@ class ProjectList extends Component {
   };
 
   handleOpen = () => {
-    this.setState({ dialogOpen: true });
+    // this.setState({ dialogOpen: true });
+    this.props.onAddProject("Test");
   }
 
   handleClose = () => {
@@ -37,11 +40,9 @@ class ProjectList extends Component {
     ];
     return (
       <div>
-        <Drawer containerStyle={{marginTop: 65}}>
+        <Drawer containerStyle={{position: "absolute", top: 0, bottom: 0}}>
           <List>
-            <Subheader>
-              Projects
-            </Subheader>
+            <Subheader>Projects</Subheader>
             {
               this.props.projects.map(project =>
                 <ListItem key={project.get("id")}>{project.get("name")}</ListItem>
@@ -58,8 +59,9 @@ class ProjectList extends Component {
           <TextField
             ref={input => {if (input) input.focus();}}
             style={{width: "100%"}}
-            hintText="Project Name" value={this.state.dialogText}
-            onKeyDown={e => { if (e.keyCode === 13) this.addNewProject(); } }
+            hintText="Project Name"
+            value={this.state.dialogText}
+            onKeyDown={e => { if (e.keyCode === ENTER_KEY_CODE) this.addNewProject(); } }
             onChange={e => { this.setState({dialogText: e.target.value}); }} />
         </Dialog>
       </div>
