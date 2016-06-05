@@ -1,4 +1,4 @@
-import { ADD_PROJECT, ADD_TASK, ADD_PROFILE } from "../constants/ActionTypes";
+import { ADD_PROJECT, ADD_TASK, ADD_PROFILE, SELECT_PROJECT } from "../constants/ActionTypes";
 import { Map, List, fromJS } from "immutable";
 
 const initialState = fromJS({
@@ -47,6 +47,10 @@ export default function base(state = initialState, action) {
           [newId]: { id: newId, name: action.name }
         },
         tasks: state.get("tasks").push(newId)
+      });
+    case SELECT_PROJECT:
+      return state.mergeDeep({
+        ui: { selectedProject: action.id }
       });
     default:
       return state;

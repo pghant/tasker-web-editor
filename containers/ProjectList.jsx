@@ -7,7 +7,7 @@ import TextField from "material-ui/TextField";
 import { List, ListItem, MakeSelectable } from "material-ui/List";
 import Dialog from "material-ui/Dialog";
 import { List as ImmList, Map } from "immutable";
-import { addProject } from "../actions/base";
+import { addProject, selectProject } from "../actions/base";
 
 const ENTER_KEY_CODE = 13;
 let SelectableList = MakeSelectable(List);
@@ -36,22 +36,25 @@ class ProjectList extends Component {
       <FlatButton label="Cancel" onTouchTap={this.handleClose} />,
       <FlatButton label="Add" onTouchTap={this.addNewProject} primary={true} />
     ];
+    console.log(this.props.selectedProject);
     return (
       <div>
         <Drawer containerStyle={{position: "absolute", top: 0, bottom: 0}}>
-          <SelectableList defaultValue={this.props.selectedProject}>
+          <SelectableList defaultValue={this.props.selectedProject} onChange={(event, val) => {this.props.onSelectProject(val)}}>
             <Subheader>Projects</Subheader>
             {
               this.props.projects.map(project =>
-                <ListItem key={project.get("id")} value={project.get("id")}>{project.get("name")}</ListItem>
+                <ListItem key={project.get("id")} value={project.get("id")}>
+                  {project.get("name")}
+                </ListItem>
               )
             }
-            <div style={{width: "100%"}}>
-              <div style={{margin: "0 auto", width: "50%"}}>
-                <FlatButton label="Add Project" primary={true} onTouchTap={this.handleOpen}/>
-              </div>
-            </div>
           </SelectableList>
+          <div style={{width: "100%"}}>
+            <div style={{margin: "0 auto", width: "50%"}}>
+              <FlatButton label="Add Project" primary={true} onTouchTap={this.handleOpen}/>
+            </div>
+          </div>
         </Drawer>
         <Dialog title="Add New Project" modal={false} actions={dialogActions} open={this.state.dialogOpen} onRequestClose={this.handleClose}>
           <TextField
@@ -70,7 +73,8 @@ class ProjectList extends Component {
 ProjectList.propTypes = {
   projects: PropTypes.instanceOf(ImmList).isRequired,
   onAddProject: PropTypes.func.isRequired,
-  selectedProject: PropTypes.number.isRequired
+  selectedProject: PropTypes.number.isRequired,
+  onSelectProject: PropTypes.func.isRequired
 };
 
 function mapStateToProps(state) {
@@ -83,8 +87,11 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    onAddProject: (name) => {
+    onAddProject: name => {
       dispatch(addProject(name));
+    },
+    onSelectProject: id => {
+      dispatch(selectProject(id));
     }
   }
 }
