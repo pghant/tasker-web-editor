@@ -9,10 +9,11 @@ import { List as ImmList, Map } from "immutable";
 class ListPanel extends Component {
   render() {
     let message;
-    if (this.props.listItems.count() > 0) {
-      message = this.props.listItems.map(item => <ListItem key={item.get("id")}>{item.get("name")}</ListItem>);
+    const { listTitle, addItem, listItems, emptyMessage } = this.props;
+    if (listItems.count() > 0) {
+      message = listItems.map(item => <ListItem key={item.get("id")}>{item.get("name")}</ListItem>);
     } else {
-      message = <span style={{fontSize: "1.2em", display: "block"}}>{this.props.emptyMessage}</span>;
+      message = <span style={{fontSize: "1.2em", display: "block"}}>{emptyMessage}</span>;
     }
     let paperStyle = {
       width: "50%",
@@ -24,12 +25,12 @@ class ListPanel extends Component {
       <Paper style={paperStyle}>
         <Toolbar>
           <ToolbarGroup>
-            <ToolbarTitle text={this.props.listTitle} />
+            <ToolbarTitle text={listTitle} />
           </ToolbarGroup>
           <ToolbarGroup style={{flexDirection: "column", justifyContent: "center"}}>
             <IconButton
-              tooltip={`Add ${this.props.listTitle.slice(0, -1)}`}
-              onTouchTap={() => this.props.addItem("Test")}>
+              tooltip={`Add ${listTitle.slice(0, -1)}`}
+              onTouchTap={() => addItem("Test")}>
               <AddIcon />
             </IconButton>
           </ToolbarGroup>
@@ -45,7 +46,8 @@ class ListPanel extends Component {
 ListPanel.propTypes = {
   listItems: PropTypes.instanceOf(ImmList).isRequired,
   listTitle: PropTypes.string.isRequired,
-  emptyMessage: PropTypes.string.isRequired
+  emptyMessage: PropTypes.string.isRequired,
+  addItem: PropTypes.func.isRequred
 };
 
 export default ListPanel;
