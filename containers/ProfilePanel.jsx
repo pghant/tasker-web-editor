@@ -4,8 +4,8 @@ import ListPanel from "../components/ListPanel";
 import { List as ImmList, Map } from "immutable";
 import { addProfile } from "../actions/base";
 
-const ProfilePanel = ({ profiles }) => (
-  <ListPanel listItems={profiles} listTitle="Profiles" emptyMessage="No profiles added" />
+const ProfilePanel = ({ profiles, onAddProfile }) => (
+  <ListPanel listItems={profiles} listTitle="Profiles" emptyMessage="No profiles added" addItem={onAddProfile} />
 )
 
 ProfilePanel.propTypes = {

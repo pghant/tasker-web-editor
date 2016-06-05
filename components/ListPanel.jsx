@@ -27,7 +27,11 @@ class ListPanel extends Component {
             <ToolbarTitle text={this.props.listTitle} />
           </ToolbarGroup>
           <ToolbarGroup style={{flexDirection: "column", justifyContent: "center"}}>
-            <IconButton tooltip={`Add ${this.props.listTitle.slice(0, -1)}`}><AddIcon /></IconButton>
+            <IconButton
+              tooltip={`Add ${this.props.listTitle.slice(0, -1)}`}
+              onTouchTap={() => this.props.addItem("Test")}>
+              <AddIcon />
+            </IconButton>
           </ToolbarGroup>
         </Toolbar>
         <List>
