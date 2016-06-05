@@ -9,7 +9,7 @@ import { List as ImmList, Map } from "immutable";
 class ListPanel extends Component {
   render() {
     let message;
-    const { listTitle, addItem, listItems, emptyMessage } = this.props;
+    const { listTitle, addItem, listItems, emptyMessage, style } = this.props;
     if (listItems.count() > 0) {
       message = listItems.map(item => <ListItem key={item.get("id")}>{item.get("name")}</ListItem>);
     } else {
@@ -22,7 +22,7 @@ class ListPanel extends Component {
       display: "block"
     };
     return (
-      <Paper style={paperStyle}>
+      <Paper style={Object.assign({}, paperStyle, style)}>
         <Toolbar>
           <ToolbarGroup>
             <ToolbarTitle text={listTitle} />
@@ -47,7 +47,8 @@ ListPanel.propTypes = {
   listItems: PropTypes.instanceOf(ImmList).isRequired,
   listTitle: PropTypes.string.isRequired,
   emptyMessage: PropTypes.string.isRequired,
-  addItem: PropTypes.func.isRequired
+  addItem: PropTypes.func.isRequired,
+  style: PropTypes.object
 };
 
 export default ListPanel;

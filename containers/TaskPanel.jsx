@@ -4,13 +4,14 @@ import ListPanel from "../components/ListPanel";
 import { List as ImmList, Map } from "immutable";
 import { addTask } from "../actions/base";
 
-const TaskPanel = ({ tasks, onAddTask }) => (
-  <ListPanel listItems={tasks} listTitle="Tasks" emptyMessage="No tasks added" addItem={onAddTask} />
+const TaskPanel = ({ tasks, onAddTask, style }) => (
+  <ListPanel listItems={tasks} listTitle="Tasks" emptyMessage="No tasks added" addItem={onAddTask} style />
 )
 
 TaskPanel.propTypes = {
   tasks: PropTypes.instanceOf(ImmList).isRequired,
-  onAddTask: PropTypes.func.isRequired
+  onAddTask: PropTypes.func.isRequired,
+  style: PropTypes.object
 };
 
 function mapStateToProps(state) {
