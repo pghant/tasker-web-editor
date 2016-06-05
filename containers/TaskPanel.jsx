@@ -15,8 +15,10 @@ TaskPanel.propTypes = {
 
 function mapStateToProps(state) {
   let bState = state.base;
+  let selectedProject = bState.getIn(["ui", "selectedProject"]);
+  let tids = bState.getIn(["projectsById", `${selectedProject}`, "tids"]);
   return {
-    tasks: bState.get("tasks").map(id => bState.getIn(["tasksById", `${id}`]))
+    tasks: tids.map(id => bState.getIn(["tasksById", `${id}`]))
   };
 }
 

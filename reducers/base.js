@@ -46,7 +46,12 @@ export default function base(state = initialState, action) {
         tasksById: {
           [newId]: { id: newId, name: action.name }
         },
-        tasks: state.get("tasks").push(newId)
+        tasks: state.get("tasks").push(newId),
+        projectsById: {
+          [selectedProject]: {
+            tids: state.getIn(["projectsById", `${selectedProject}`, "tids"]).push(newId)
+          }
+        }
       });
     case SELECT_PROJECT:
       return state.mergeDeep({
