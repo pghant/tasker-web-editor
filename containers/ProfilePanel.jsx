@@ -15,8 +15,10 @@ ProfilePanel.propTypes = {
 
 function mapStateToProps(state) {
   let bState = state.base;
+  let selectedProject = bState.getIn(["ui", "selectedProject"]);
+  let pids = bState.getIn(["projectsById", `${selectedProject}`, "pids"]);
   return {
-    profiles: bState.get("profiles").map(id => bState.getIn(["profilesById", `${id}`]))
+    profiles: pids.map(id => bState.getIn(["profilesById", `${id}`]))
   };
 }
 
