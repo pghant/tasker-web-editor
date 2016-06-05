@@ -1,18 +1,25 @@
-import React, { Component, PropTypes } from "react";
-import { connect } from "react-redux";
+import React, { PropTypes } from "react";
 import AppBar from "material-ui/AppBar";
+import muiThemeable from "material-ui/styles/muiThemeable";
 import ProjectList from "../containers/ProjectList";
 import ProfilePanel from "../containers/ProfilePanel";
-import * as BaseActions from "../actions/base";
+import TaskPanel from "../containers/TaskPanel";
 
-const App = () => (
+const App = ({muiTheme}) => (
   <div>
     <AppBar title="Tasker Web Editor" showMenuIconButton={false} />
-    <ProjectList />
-    <div style={{marginLeft: 300, width: 900}}>
-      <ProfilePanel />
+    <div className="body" style={{position: "fixed", top: muiTheme.appBar.height, bottom: 0, left: 0, right: 0}}>
+      <ProjectList />
+      <div className="main" style={{position: "absolute", left: muiTheme.drawer.width, right: 0}}>
+        <ProfilePanel />
+        <TaskPanel />
+      </div>
     </div>
   </div>
 )
 
-export default App;
+App.propTypes = {
+  muiTheme: PropTypes.object.isRequired
+}
+
+export default muiThemeable()(App);

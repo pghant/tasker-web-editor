@@ -1,0 +1,34 @@
+import React, { PropTypes } from "react";
+import { connect } from "react-redux";
+import ListPanel from "../components/ListPanel";
+import { List as ImmList, Map } from "immutable";
+import { addTask } from "../actions/base";
+
+const TaskPanel = ({ tasks, onAddTask }) => (
+  <ListPanel listItems={tasks} listTitle="Tasks" emptyMessage="No tasks added" addItem={onAddTask} />
+)
+
+TaskPanel.propTypes = {
+  tasks: PropTypes.instanceOf(ImmList).isRequired,
+  onAddTask: PropTypes.func.isRequired
+};
+
+function mapStateToProps(state) {
+  let bState = state.base;
+  return {
+    tasks: bState.get("tasks").map(id => bState.getIn(["tasksById", `${id}`]))
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    onAddTask: (name) => {
+      dispatch(addTask(name));
+    }
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(TaskPanel);

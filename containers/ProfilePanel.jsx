@@ -1,20 +1,12 @@
-import React, { PropTypes, Component } from "react";
+import React, { PropTypes } from "react";
 import { connect } from "react-redux";
-import Subheader from "material-ui/Subheader";
-import FlatButton from "material-ui/FlatButton";
-import TextField from "material-ui/TextField";
-import Dialog from "material-ui/Dialog";
-import Paper from "material-ui/Paper";
-import { List, ListItem } from "material-ui/List";
 import ListPanel from "../components/ListPanel";
 import { List as ImmList, Map } from "immutable";
 import { addProfile } from "../actions/base";
 
-class ProfilePanel extends Component {
-  render() {
-    return <ListPanel listItems={this.props.profiles} listTitle="Profiles" emptyMessage="No profiles added" />;
-  }
-}
+const ProfilePanel = ({ profiles, onAddProfile }) => (
+  <ListPanel listItems={profiles} listTitle="Profiles" emptyMessage="No profiles added" addItem={onAddProfile} />
+)
 
 ProfilePanel.propTypes = {
   profiles: PropTypes.instanceOf(ImmList).isRequired,

@@ -7,26 +7,37 @@ const initialState = fromJS({
   },
   projects: [0],
   profilesById: {},
-  profiles: []
+  profiles: [],
+  tasksById: {},
+  tasks: []
 });
 
 export default function base(state = initialState, action) {
+  let newId;
   switch (action.type) {
     case ADD_PROJECT:
-      let newProjId = state.get("projects").max() + 1;
+      newId = state.get("projects").max() + 1;
       return state.mergeDeep({
         projectsById: {
-          [newProjId]: { id: newProjId, name: action.name }
+          [newId]: { id: newId, name: action.name }
         },
-        projects: state.get("projects").push(newProjId)
+        projects: state.get("projects").push(newId)
       });
     case ADD_PROFILE:
-      let newProfId = state.get("profiles").count() === 0 ? 0 : state.get("profiles").max() + 1;
+      newId = state.get("profiles").count() === 0 ? 0 : state.get("profiles").max() + 1;
       return state.mergeDeep({
         profilesById: {
-          [newProfId]: { id: newProfId, name: action.name }
+          [newId]: { id: newId, name: action.name }
         },
-        profiles: state.get("profiles").push(newProfId)
+        profiles: state.get("profiles").push(newId)
+      });
+    case ADD_TASK:
+      newId = state.get("tasks").count() === 0 ? 0 : state.get("tasks").max() + 1;
+      return state.mergeDeep({
+        tasksById: {
+          [newId]: { id: newId, name: action.name }
+        },
+        tasks: state.get("tasks").push(newId)
       });
     default:
       return state;

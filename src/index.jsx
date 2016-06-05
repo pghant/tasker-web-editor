@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
-import MyRawTheme from "../src/material_ui_raw_theme_file";
+import TWEMuiTheme from "./muiThemeSpec";
 
 import App from "../components/App";
 import configureStore from "../store/configureStore";
@@ -24,7 +24,7 @@ const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
-    <MuiThemeProvider muiTheme={getMuiTheme()}>
+    <MuiThemeProvider muiTheme={getMuiTheme(TWEMuiTheme)}>
       <App />
     </MuiThemeProvider>
   </Provider>,

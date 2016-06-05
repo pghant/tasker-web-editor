@@ -1,13 +1,15 @@
 import React, { PropTypes, Component } from "react";
 import { connect } from "react-redux";
 import Drawer from "material-ui/Drawer";
-import MenuItem from "material-ui/MenuItem";
 import Subheader from "material-ui/Subheader";
 import FlatButton from "material-ui/FlatButton";
 import TextField from "material-ui/TextField";
+import { List, ListItem } from "material-ui/List";
 import Dialog from "material-ui/Dialog";
-import { List, Map } from "immutable";
+import { List as ImmList, Map } from "immutable";
 import { addProject } from "../actions/base";
+
+const ENTER_KEY_CODE = 13;
 
 class ProjectList extends Component {
   state = {
@@ -35,25 +37,28 @@ class ProjectList extends Component {
     ];
     return (
       <div>
-        <Drawer containerStyle={{marginTop: 65}}>
-          <Subheader>Projects</Subheader>
-          {
-            this.props.projects.map(project =>
-              <MenuItem key={project.get("id")}>{project.get("name")}</MenuItem>
-            )
-          }
-          <div style={{width: "100%"}}>
-            <div style={{margin: "0 auto", width: "50%"}}>
-              <FlatButton label="Add Project" primary={true} onTouchTap={this.handleOpen}/>
+        <Drawer containerStyle={{position: "absolute", top: 0, bottom: 0}}>
+          <List>
+            <Subheader>Projects</Subheader>
+            {
+              this.props.projects.map(project =>
+                <ListItem key={project.get("id")}>{project.get("name")}</ListItem>
+              )
+            }
+            <div style={{width: "100%"}}>
+              <div style={{margin: "0 auto", width: "50%"}}>
+                <FlatButton label="Add Project" primary={true} onTouchTap={this.handleOpen}/>
+              </div>
             </div>
-          </div>
+          </List>
         </Drawer>
         <Dialog title="Add New Project" modal={false} actions={dialogActions} open={this.state.dialogOpen} onRequestClose={this.handleClose}>
           <TextField
             ref={input => {if (input) input.focus();}}
             style={{width: "100%"}}
-            hintText="Project Name" value={this.state.dialogText}
-            onKeyDown={e => { if (e.keyCode === 13) this.addNewProject(); } }
+            hintText="Project Name"
+            value={this.state.dialogText}
+            onKeyDown={e => { if (e.keyCode === ENTER_KEY_CODE) this.addNewProject(); } }
             onChange={e => { this.setState({dialogText: e.target.value}); }} />
         </Dialog>
       </div>
@@ -62,7 +67,7 @@ class ProjectList extends Component {
 }
 
 ProjectList.propTypes = {
-  projects: PropTypes.instanceOf(List).isRequired,
+  projects: PropTypes.instanceOf(ImmList).isRequired,
   onAddProject: PropTypes.func.isRequired
 };
 

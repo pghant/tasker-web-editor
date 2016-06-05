@@ -7,3 +7,7 @@ export function addProject(name) {
 export function addProfile(name) {
   return { type: types.ADD_PROFILE, name };
 }
+
+export function addTask(name) {
+  return { type: types.ADD_TASK, name };
+}
