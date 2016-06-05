@@ -47,7 +47,7 @@ ListPanel.propTypes = {
   listItems: PropTypes.instanceOf(ImmList).isRequired,
   listTitle: PropTypes.string.isRequired,
   emptyMessage: PropTypes.string.isRequired,
-  addItem: PropTypes.func.isRequred
+  addItem: PropTypes.func.isRequired
 };
 
 export default ListPanel;
