@@ -13,7 +13,7 @@ class ListPanel extends Component {
     if (listItems.count() > 0) {
       message = listItems.map(item => <ListItem key={item.get("id")}>{item.get("name")}</ListItem>);
     } else {
-      message = <span style={{fontSize: "1.2em", display: "block"}}>{emptyMessage}</span>;
+      message = <span style={{fontSize: "1.2em", display: "block", marginLeft: 24}}>{emptyMessage}</span>;
     }
     let paperStyle = {
       width: "50%",
