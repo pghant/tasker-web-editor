@@ -4,12 +4,13 @@ import Drawer from "material-ui/Drawer";
 import Subheader from "material-ui/Subheader";
 import FlatButton from "material-ui/FlatButton";
 import TextField from "material-ui/TextField";
-import { List, ListItem } from "material-ui/List";
+import { List, ListItem, MakeSelectable } from "material-ui/List";
 import Dialog from "material-ui/Dialog";
 import { List as ImmList, Map } from "immutable";
 import { addProject } from "../actions/base";
 
 const ENTER_KEY_CODE = 13;
+let SelectableList = MakeSelectable(List);
 
 class ProjectList extends Component {
   state = {
@@ -38,11 +39,11 @@ class ProjectList extends Component {
     return (
       <div>
         <Drawer containerStyle={{position: "absolute", top: 0, bottom: 0}}>
-          <List>
+          <SelectableList defaultValue={this.props.selectedProject}>
             <Subheader>Projects</Subheader>
             {
               this.props.projects.map(project =>
-                <ListItem key={project.get("id")}>{project.get("name")}</ListItem>
+                <ListItem key={project.get("id")} value={project.get("id")}>{project.get("name")}</ListItem>
               )
             }
             <div style={{width: "100%"}}>
@@ -50,7 +51,7 @@ class ProjectList extends Component {
                 <FlatButton label="Add Project" primary={true} onTouchTap={this.handleOpen}/>
               </div>
             </div>
-          </List>
+          </SelectableList>
         </Drawer>
         <Dialog title="Add New Project" modal={false} actions={dialogActions} open={this.state.dialogOpen} onRequestClose={this.handleClose}>
           <TextField
@@ -68,13 +69,15 @@ class ProjectList extends Component {
 
 ProjectList.propTypes = {
   projects: PropTypes.instanceOf(ImmList).isRequired,
-  onAddProject: PropTypes.func.isRequired
+  onAddProject: PropTypes.func.isRequired,
+  selectedProject: PropTypes.number.isRequired
 };
 
 function mapStateToProps(state) {
   let bState = state.base;
   return {
-    projects: bState.get("projects").map(id => bState.getIn(["projectsById", `${id}`]))
+    projects: bState.get("projects").map(id => bState.getIn(["projectsById", `${id}`])),
+    selectedProject: bState.getIn(["ui", "selectedProject"])
   };
 }
 
