@@ -26,6 +26,10 @@ class ProjectList extends Component {
     this.setState({ dialogOpen: false, dialogText: "" })
   }
 
+  handleProjectSelection = (event, val) => {
+    this.props.onSelectProject(val);
+  }
+
   addNewProject = () => {
     this.props.onAddProject(this.state.dialogText);
     this.handleClose();
@@ -36,11 +40,10 @@ class ProjectList extends Component {
       <FlatButton label="Cancel" onTouchTap={this.handleClose} />,
       <FlatButton label="Add" onTouchTap={this.addNewProject} primary={true} />
     ];
-    console.log(this.props.selectedProject);
     return (
       <div>
         <Drawer containerStyle={{position: "absolute", top: 0, bottom: 0}}>
-          <SelectableList defaultValue={this.props.selectedProject} onChange={(event, val) => {this.props.onSelectProject(val)}}>
+          <SelectableList value={this.props.selectedProject} onChange={this.handleProjectSelection}>
             <Subheader>Projects</Subheader>
             {
               this.props.projects.map(project =>
