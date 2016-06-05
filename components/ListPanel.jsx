@@ -1,6 +1,8 @@
 import React, { PropTypes, Component } from "react";
 import Paper from "material-ui/Paper";
 import { Toolbar, ToolbarGroup, ToolbarTitle } from "material-ui/Toolbar";
+import AddIcon from "material-ui/svg-icons/content/add";
+import IconButton from "material-ui/IconButton";
 import { List, ListItem } from "material-ui/List";
 import { List as ImmList, Map } from "immutable";
 
@@ -21,12 +23,14 @@ class ListPanel extends Component {
     return (
       <Paper style={paperStyle}>
         <Toolbar>
-          <ToolbarGroup firstChild={true}>
+          <ToolbarGroup>
             <ToolbarTitle text={this.props.listTitle} />
+          </ToolbarGroup>
+          <ToolbarGroup style={{flexDirection: "column", justifyContent: "center"}}>
+            <IconButton tooltip={`Add ${this.props.listTitle.slice(0, -1)}`}><AddIcon /></IconButton>
           </ToolbarGroup>
         </Toolbar>
         <List>
-          <span style={{paddingBottom: 10, fontSize: "1.5em", display: "block"}}>{this.props.listTitle}</span>
           {message}
         </List>
       </Paper>
