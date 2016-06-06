@@ -25,7 +25,8 @@ export default function base(state = initialState, action) {
         projectsById: {
           [newId]: { id: newId, name: action.name, tids: [], pids: [] }
         },
-        projects: state.get("projects").push(newId)
+        projects: state.get("projects").push(newId),
+        ui: { selectedProject: newId }
       });
     case ADD_PROFILE:
       newId = state.get("profiles").count() === 0 ? 0 : state.get("profiles").max() + 1;
