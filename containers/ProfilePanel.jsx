@@ -4,19 +4,23 @@ import ListPanel from "../components/ListPanel";
 import { List as ImmList, Map } from "immutable";
 import { addProfile } from "../actions/base";
 
-const ProfilePanel = ({ profiles, onAddProfile }) => (
-  <ListPanel listItems={profiles} listTitle="Profiles" emptyMessage="No profiles added" addItem={onAddProfile} />
+const ProfilePanel = ({ profiles, onAddProfile, style }) => (
+  <ListPanel listItems={profiles} listTitle="Profiles" emptyMessage="No profiles added" addItem={onAddProfile}
+    containerStyle={style} />
 )
 
 ProfilePanel.propTypes = {
   profiles: PropTypes.instanceOf(ImmList).isRequired,
-  onAddProfile: PropTypes.func.isRequired
+  onAddProfile: PropTypes.func.isRequired,
+  style: PropTypes.object
 };
 
 function mapStateToProps(state) {
   let bState = state.base;
+  let selectedProject = bState.getIn(["ui", "selectedProject"]);
+  let pids = bState.getIn(["projectsById", `${selectedProject}`, "pids"]);
   return {
-    profiles: bState.get("profiles").map(id => bState.getIn(["profilesById", `${id}`]))
+    profiles: pids.map(id => bState.getIn(["profilesById", `${id}`]))
   };
 }
 

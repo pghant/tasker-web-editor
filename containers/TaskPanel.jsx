@@ -4,19 +4,22 @@ import ListPanel from "../components/ListPanel";
 import { List as ImmList, Map } from "immutable";
 import { addTask } from "../actions/base";
 
-const TaskPanel = ({ tasks, onAddTask }) => (
-  <ListPanel listItems={tasks} listTitle="Tasks" emptyMessage="No tasks added" addItem={onAddTask} />
+const TaskPanel = ({ tasks, onAddTask, style }) => (
+  <ListPanel listItems={tasks} listTitle="Tasks" emptyMessage="No tasks added" addItem={onAddTask} containerStyle={style} />
 )
 
 TaskPanel.propTypes = {
   tasks: PropTypes.instanceOf(ImmList).isRequired,
-  onAddTask: PropTypes.func.isRequired
+  onAddTask: PropTypes.func.isRequired,
+  style: PropTypes.object
 };
 
 function mapStateToProps(state) {
   let bState = state.base;
+  let selectedProject = bState.getIn(["ui", "selectedProject"]);
+  let tids = bState.getIn(["projectsById", `${selectedProject}`, "tids"]);
   return {
-    tasks: bState.get("tasks").map(id => bState.getIn(["tasksById", `${id}`]))
+    tasks: tids.map(id => bState.getIn(["tasksById", `${id}`]))
   };
 }
 

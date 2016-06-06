@@ -11,3 +11,7 @@ export function addProfile(name) {
 export function addTask(name) {
   return { type: types.ADD_TASK, name };
 }
+
+export function selectProject(id) {
+  return { type: types.SELECT_PROJECT, id };
+}
