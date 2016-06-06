@@ -1,0 +1,2425 @@
+<datadef>
+<maxversion class="Action" v.="7"/>
+<maxversion class="App" v.="1" base="Arg"/>
+<maxversion class="Bundle" v.="1"/>
+<maxversion class="Img" v.="2"/>
+<maxversion class="Int" v.="1"/>
+<maxversion class="Scene" v.="1"/>
+<maxversion class="Str" v.="3"/>
+<maxversion class="App" v.="2" base="Context"/>
+<maxversion class="Condition" v.="3"/>
+<maxversion class="ConditionList" v.="1"/>
+<maxversion class="Day" v.="1"/>
+<maxversion class="Event" v.="2"/>
+<maxversion class="Kid" v.="1"/>
+<maxversion class="ListElementItem" v.="1"/>
+<maxversion class="Loc" v.="1"/>
+<maxversion class="Project" v.="2"/>
+<maxversion class="Scene" v.="1"/>
+<maxversion class="ButtonElement" v.="3"/>
+<maxversion class="CheckBoxElement" v.="1"/>
+<maxversion class="DoodleElement" v.="1"/>
+<maxversion class="EditTextElement" v.="3"/>
+<maxversion class="LinkClickFilter" v.="1"/>
+<maxversion class="StrokeFilter" v.="1"/>
+<maxversion class="ImageElement" v.="2"/>
+<maxversion class="ListElement" v.="1"/>
+<maxversion class="SceneElement" v.="2"/>
+<maxversion class="OvalElement" v.="1"/>
+<maxversion class="PropertiesElement" v.="1"/>
+<maxversion class="RectElement" v.="1"/>
+<maxversion class="SliderElement" v.="1"/>
+<maxversion class="SpinnerElement" v.="1"/>
+<maxversion class="TextElement" v.="3"/>
+<maxversion class="ToggleElement" v.="1"/>
+<maxversion class="WebElement" v.="2"/>
+<maxversion class="State" v.="2"/>
+<maxversion class="Task" v.="1"/>
+<maxversion class="TaskerData" v.="1"/>
+<maxversion class="Profile" v.="2"/>
+<maxversion class="TaskTimer" v.="1"/>
+<maxversion class="Time" v.="1"/>
+<state code="154" nameLocal="Active User" argCount="1">
+	<arg num="0" nameLocal="User ID" dataType="int" optional="true" privacy="public" contentType="valueOrVariable"/>
+</state>
+<state code="100" nameLocal="Airplane Mode" argCount="0"/>
+<state code="135" nameLocal="Auto-Sync" argCount="0"/>
+<state code="140" nameLocal="Battery Level" argCount="2">
+	<arg num="0" nameLocal="From" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="To" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</state>
+<state code="141" nameLocal="Battery Temperature" argCount="2">
+	<arg num="0" nameLocal="From" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="To" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</state>
+<state code="3" nameLocal="BT Connected" argCount="2">
+	<arg num="0" nameLocal="Name" dataType="str" optional="true" privacy="private" contentType="str"/>
+	<arg num="1" nameLocal="Address" dataType="str" optional="true" privacy="private" contentType="str"/>
+</state>
+<state code="4" nameLocal="BT Near" argCount="7">
+	<arg num="0" nameLocal="Name" dataType="str" optional="true" privacy="private" contentType="str"/>
+	<arg num="1" nameLocal="Address" dataType="str" optional="true" privacy="private" contentType="str"/>
+	<arg num="2" nameLocal="Major Device Class" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Any"/>
+		<option num="1" labelLocal="Audio / Video"/>
+		<option num="2" labelLocal="Computer"/>
+		<option num="3" labelLocal="Health"/>
+		<option num="4" labelLocal="Imaging"/>
+		<option num="5" labelLocal="Misc"/>
+		<option num="6" labelLocal="Networking"/>
+		<option num="7" labelLocal="Peripheral"/>
+		<option num="8" labelLocal="Phone"/>
+		<option num="9" labelLocal="Toy"/>
+		<option num="10" labelLocal="Wearable"/>
+		<option num="11" labelLocal="Uncategorized"/>
+	</arg>
+	<arg num="3" nameLocal="Standard Devices" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="4" nameLocal="Low-Energy (LE) Devices" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="5" nameLocal="Unpaired Devices" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="6" nameLocal="Toggle BlueTooth" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</state>
+<state code="2" nameLocal="BT Status" argCount="1">
+	<arg num="0" nameLocal="Status" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Off"/>
+		<option num="1" labelLocal="On"/>
+	</arg>
+</state>
+<state code="5" nameLocal="Calendar Entry" argCount="5">
+	<arg num="0" nameLocal="Title" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Location" dataType="str" optional="true" privacy="private" contentType="str"/>
+	<arg num="2" nameLocal="Description" dataType="str" optional="true" privacy="private" contentType="str"/>
+	<arg num="3" nameLocal="Available" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Any"/>
+		<option num="1" labelLocal="No"/>
+		<option num="2" labelLocal="Yes"/>
+	</arg>
+	<arg num="4" nameLocal="Calendar" dataType="str" optional="true" privacy="private" contentType="str"/>
+</state>
+<state code="40" nameLocal="Call" argCount="2">
+	<arg num="0" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Incoming"/>
+		<option num="1" labelLocal="Outgoing"/>
+		<option num="2" labelLocal="Any"/>
+	</arg>
+	<arg num="1" nameLocal="Number" dataType="str" optional="true" privacy="private" contentType="str"/>
+</state>
+<state code="7" nameLocal="Cell Near" argCount="2">
+	<arg num="0" nameLocal="Cell Tower / Last Signal" dataType="str" optional="false" privacy="private" contentType="str"/>
+	<arg num="1" nameLocal="Ignore Cells" dataType="str" optional="true" privacy="private" contentType="str"/>
+</state>
+<state code="16" nameLocal="Device Idle" argCount="1">
+	<arg num="0" nameLocal="Enabled" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</state>
+<state code="122" nameLocal="Display Orientation" argCount="1">
+	<arg num="0" nameLocal="Is" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Portrait"/>
+		<option num="1" labelLocal="Landscape"/>
+	</arg>
+</state>
+<state code="123" nameLocal="Display State" argCount="1">
+	<arg num="0" nameLocal="Is" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Off"/>
+		<option num="1" labelLocal="On"/>
+	</arg>
+</state>
+<state code="80" nameLocal="Docked" argCount="1">
+	<arg num="0" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Any"/>
+		<option num="1" labelLocal="Car"/>
+		<option num="2" labelLocal="Desk"/>
+		<option num="3" labelLocal="Other"/>
+	</arg>
+</state>
+<state code="175" nameLocal="Dreaming" argCount="0"/>
+<state code="161" nameLocal="Ethernet Connect" argCount="0"/>
+<state code="12" nameLocal="HDMI Plugged" argCount="0"/>
+<state code="30" nameLocal="Headset Plugged" argCount="1">
+	<arg num="0" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Any"/>
+		<option num="1" labelLocal="Mic"/>
+		<option num="2" labelLocal="No Mic"/>
+	</arg>
+</state>
+<state code="182" nameLocal="Heart Rate" argCount="2">
+	<arg num="0" nameLocal="From" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="To" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</state>
+<state code="185" nameLocal="Humidity" argCount="2">
+	<arg num="0" nameLocal="From" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="To" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</state>
+<state code="50" nameLocal="Keyboard Out" argCount="0"/>
+<state code="103" nameLocal="Light Level" argCount="2">
+	<arg num="0" nameLocal="From" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="To" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</state>
+<state code="106" nameLocal="Magnetic Field" argCount="3">
+	<arg num="0" nameLocal="Axis" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="All"/>
+	</arg>
+	<arg num="1" nameLocal="From" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="To" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</state>
+<state code="105" nameLocal="Media Button" argCount="4">
+	<arg num="0" nameLocal="Button" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Play"/>
+		<option num="1" labelLocal="Previous"/>
+		<option num="2" labelLocal="Next"/>
+		<option num="3" labelLocal="Rewind"/>
+		<option num="4" labelLocal="Fast Forward"/>
+		<option num="5" labelLocal="Pause / Stop"/>
+	</arg>
+	<arg num="1" nameLocal="Held Down" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="2" nameLocal="Grab" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="3" nameLocal="Stop Event" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</state>
+<state code="107" nameLocal="Missed Call" argCount="1">
+	<arg num="0" nameLocal="Caller" dataType="str" optional="true" privacy="private" contentType="str"/>
+</state>
+<state code="110" nameLocal="Mobile Network" argCount="4">
+	<arg num="0" nameLocal="2G" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="1" nameLocal="3G" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="2" nameLocal="3G - HSPA" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="3" nameLocal="4G" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</state>
+<state code="195" nameLocal="NFC Status" argCount="1">
+	<arg num="0" nameLocal="Status" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Off"/>
+		<option num="1" labelLocal="On"/>
+	</arg>
+</state>
+<state code="120" nameLocal="Orientation" argCount="1">
+	<arg num="0" nameLocal="Is" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Face Up"/>
+		<option num="1" labelLocal="Face Down"/>
+		<option num="2" labelLocal="Standing Up"/>
+		<option num="3" labelLocal="Upside Down"/>
+		<option num="4" labelLocal="Left Side"/>
+		<option num="5" labelLocal="Right Side"/>
+	</arg>
+</state>
+<state code="10" nameLocal="Power" argCount="1">
+	<arg num="0" nameLocal="Source" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Any"/>
+		<option num="1" labelLocal="AC"/>
+		<option num="2" labelLocal="USB"/>
+		<option num="3" labelLocal="Wireless"/>
+		<option num="4" labelLocal="Other"/>
+	</arg>
+</state>
+<state code="14" nameLocal="Power Save Mode" argCount="1">
+	<arg num="0" nameLocal="Enabled" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</state>
+<state code="104" nameLocal="Pressure" argCount="2">
+	<arg num="0" nameLocal="From" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="To" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</state>
+<state code="142" nameLocal="Profile Active" argCount="1">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+</state>
+<state code="125" nameLocal="Proximity Sensor" argCount="0"/>
+<state code="145" nameLocal="Signal Strength" argCount="2">
+	<arg num="0" nameLocal="From" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="To" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</state>
+<state code="143" nameLocal="Task Running" argCount="1">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+</state>
+<state code="180" nameLocal="Temperature" argCount="2">
+	<arg num="0" nameLocal="From" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="To" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</state>
+<state code="147" nameLocal="Unread Text" argCount="3">
+	<arg num="0" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Any"/>
+		<option num="1" labelLocal="MMS"/>
+		<option num="2" labelLocal="SMS"/>
+	</arg>
+	<arg num="1" nameLocal="Sender" dataType="str" optional="true" privacy="private" contentType="str"/>
+	<arg num="2" nameLocal="Content" dataType="str" optional="true" privacy="public" contentType="str"/>
+</state>
+<state code="150" nameLocal="USB Connected" argCount="1">
+	<arg num="0" nameLocal="Class" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Any"/>
+		<option num="1" labelLocal="Application Specific"/>
+		<option num="2" labelLocal="Audio"/>
+		<option num="3" labelLocal="CDC"/>
+		<option num="4" labelLocal="Communications"/>
+		<option num="5" labelLocal="Content Security"/>
+		<option num="6" labelLocal="Content Smart Card"/>
+		<option num="7" labelLocal="HID / Keyboard"/>
+		<option num="8" labelLocal="HID / Mouse"/>
+		<option num="9" labelLocal="HID / Other"/>
+		<option num="10" labelLocal="Mass Storage"/>
+		<option num="11" labelLocal="Wireless Miscellaneous"/>
+		<option num="12" labelLocal="Per Interface"/>
+		<option num="13" labelLocal="Physical"/>
+		<option num="14" labelLocal="Printer"/>
+		<option num="15" labelLocal="Digital Camera"/>
+		<option num="16" labelLocal="Vendor Specific"/>
+		<option num="17" labelLocal="Video"/>
+		<option num="18" labelLocal="Wireless Controller"/>
+	</arg>
+</state>
+<state code="165" nameLocal="Variable Value" argCount="0"/>
+<state code="160" nameLocal="Wifi Connected" argCount="3">
+	<arg num="0" nameLocal="SSID" dataType="str" optional="true" privacy="private" contentType="str"/>
+	<arg num="1" nameLocal="MAC" dataType="str" optional="true" privacy="private" contentType="str"/>
+	<arg num="2" nameLocal="IP" dataType="str" optional="true" privacy="private" contentType="str"/>
+</state>
+<state code="170" nameLocal="Wifi Near" argCount="6">
+	<arg num="0" nameLocal="SSID" dataType="str" optional="true" privacy="private" contentType="str"/>
+	<arg num="1" nameLocal="MAC" dataType="str" optional="true" privacy="private" contentType="str"/>
+	<arg num="2" nameLocal="Capabilities" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="3" nameLocal="Min. Activate Signal Level" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="4" nameLocal="Channel" dataType="int" optional="true" privacy="public" contentType="valueOrVariable"/>
+	<arg num="5" nameLocal="Toggle Wifi" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</state>
+<event code="203" nameLocal="Battery Changed" catNameLocal="Power" argCount="0"/>
+<event code="205" nameLocal="Battery Full" catNameLocal="Power" argCount="0"/>
+<event code="206" nameLocal="Battery Overheating" catNameLocal="Power" argCount="0"/>
+<event code="305" nameLocal="Alarm Clock" catNameLocal="Date/Time" argCount="1">
+	<arg num="0" nameLocal="Label" dataType="str" optional="true" privacy="public" contentType="str"/>
+</event>
+<event code="306" nameLocal="Alarm Done" catNameLocal="Date/Time" argCount="0"/>
+<event code="300" nameLocal="Date Set" catNameLocal="Date/Time" argCount="0"/>
+<event code="302" nameLocal="Time/Date Set" catNameLocal="Date/Time" argCount="0"/>
+<event code="304" nameLocal="Timezone Set" catNameLocal="Date/Time" argCount="0"/>
+<event code="210" nameLocal="Display Off" catNameLocal="Display" argCount="0"/>
+<event code="208" nameLocal="Display On" catNameLocal="Display" argCount="0"/>
+<event code="1000" nameLocal="Display Unlocked" catNameLocal="Display" argCount="0"/>
+<event code="230" nameLocal="File Attribute Change" catNameLocal="File" argCount="1">
+	<arg num="0" nameLocal="File" dataType="str" optional="false" privacy="public" contentType="str"/>
+</event>
+<event code="224" nameLocal="File Closed" catNameLocal="File" argCount="1">
+	<arg num="0" nameLocal="File" dataType="str" optional="false" privacy="public" contentType="str"/>
+</event>
+<event code="228" nameLocal="File Deleted" catNameLocal="File" argCount="1">
+	<arg num="0" nameLocal="File" dataType="str" optional="false" privacy="public" contentType="str"/>
+</event>
+<event code="222" nameLocal="File Modified" catNameLocal="File" argCount="1">
+	<arg num="0" nameLocal="File" dataType="str" optional="false" privacy="public" contentType="str"/>
+</event>
+<event code="220" nameLocal="File Moved" catNameLocal="File" argCount="1">
+	<arg num="0" nameLocal="File" dataType="str" optional="false" privacy="public" contentType="str"/>
+</event>
+<event code="226" nameLocal="File Opened" catNameLocal="File" argCount="1">
+	<arg num="0" nameLocal="File" dataType="str" optional="false" privacy="public" contentType="str"/>
+</event>
+<event code="3000" nameLocal="Gesture" catNameLocal="Sensor" argCount="2">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Pattern" dataType="str" optional="false" privacy="public" contentType="str"/>
+</event>
+<event code="3001" nameLocal="Shake" catNameLocal="Sensor" argCount="3">
+	<arg num="0" nameLocal="Axis" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Left-Right"/>
+		<option num="1" labelLocal="Up-Down"/>
+		<option num="2" labelLocal="Backwards-Forwards"/>
+	</arg>
+	<arg num="1" nameLocal="Sensitivity" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Very Low"/>
+		<option num="1" labelLocal="Low"/>
+		<option num="2" labelLocal="Medium"/>
+		<option num="3" labelLocal="High"/>
+		<option num="4" labelLocal="Very High"/>
+	</arg>
+	<arg num="2" nameLocal="Duration" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Very Short"/>
+		<option num="1" labelLocal="Short"/>
+		<option num="2" labelLocal="Medium"/>
+		<option num="3" labelLocal="Long"/>
+		<option num="4" labelLocal="Very Long"/>
+	</arg>
+</event>
+<event code="309" nameLocal="Steps Taken" catNameLocal="Sensor" argCount="1">
+	<arg num="0" nameLocal="Number" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</event>
+<event code="2003" nameLocal="Missed Call" catNameLocal="Phone" argCount="1">
+	<arg num="0" nameLocal="Caller" dataType="str" optional="true" privacy="private" contentType="str"/>
+</event>
+<event code="4" nameLocal="Phone Idle" catNameLocal="Phone" argCount="0"/>
+<event code="2" nameLocal="Phone Offhook" catNameLocal="Phone" argCount="0"/>
+<event code="6" nameLocal="Phone Ringing" catNameLocal="Phone" argCount="1">
+	<arg num="0" nameLocal="Caller" dataType="str" optional="true" privacy="private" contentType="str"/>
+</event>
+<event code="8" nameLocal="Received Data SMS" catNameLocal="Phone" argCount="3">
+	<arg num="0" nameLocal="Sender" dataType="str" optional="true" privacy="private" contentType="str"/>
+	<arg num="1" nameLocal="Port" dataType="int" optional="false" privacy="private" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="Data" dataType="str" optional="true" privacy="public" contentType="str"/>
+</event>
+<event code="7" nameLocal="Received Text" catNameLocal="Phone" argCount="3">
+	<arg num="0" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Any"/>
+		<option num="1" labelLocal="MMS"/>
+		<option num="2" labelLocal="SMS"/>
+	</arg>
+	<arg num="1" nameLocal="Sender" dataType="str" optional="true" privacy="private" contentType="str"/>
+	<arg num="2" nameLocal="Content" dataType="str" optional="true" privacy="public" contentType="str"/>
+</event>
+<event code="2010" nameLocal="SMS Failure" catNameLocal="Phone" argCount="1">
+	<arg num="0" nameLocal="Recipient" dataType="str" optional="true" privacy="private" contentType="str"/>
+</event>
+<event code="2005" nameLocal="SMS Success" catNameLocal="Phone" argCount="1">
+	<arg num="0" nameLocal="Recipient" dataType="str" optional="true" privacy="private" contentType="str"/>
+</event>
+<event code="215" nameLocal="Button: Camera" catNameLocal="Hardware" argCount="0"/>
+<event code="216" nameLocal="Button: Long Search" catNameLocal="Hardware" argCount="0"/>
+<event code="134" nameLocal="Card Mounted" catNameLocal="Hardware" argCount="2">
+	<arg num="0" nameLocal="Card Title" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Frequency" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</event>
+<event code="136" nameLocal="Card Removed" catNameLocal="Hardware" argCount="0"/>
+<event code="135" nameLocal="Card Unmounted" catNameLocal="Hardware" argCount="0"/>
+<event code="599" nameLocal="Intent Received" catNameLocal="System" argCount="5">
+	<arg num="0" nameLocal="Action" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Cat" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="None"/>
+		<option num="1" labelLocal="Default"/>
+		<option num="2" labelLocal="Alt"/>
+		<option num="3" labelLocal="Browsable"/>
+		<option num="4" labelLocal="Car Dock"/>
+		<option num="5" labelLocal="Desk Dock"/>
+		<option num="6" labelLocal="Home"/>
+		<option num="7" labelLocal="Info"/>
+		<option num="8" labelLocal="Launcher"/>
+		<option num="9" labelLocal="Preference"/>
+		<option num="10" labelLocal="Selected Alt"/>
+		<option num="11" labelLocal="Tab"/>
+		<option num="12" labelLocal="Test"/>
+		<option num="13" labelLocal="Cardboard"/>
+	</arg>
+	<arg num="2" nameLocal="Cat" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="None"/>
+		<option num="1" labelLocal="Default"/>
+		<option num="2" labelLocal="Alt"/>
+		<option num="3" labelLocal="Browsable"/>
+		<option num="4" labelLocal="Car Dock"/>
+		<option num="5" labelLocal="Desk Dock"/>
+		<option num="6" labelLocal="Home"/>
+		<option num="7" labelLocal="Info"/>
+		<option num="8" labelLocal="Launcher"/>
+		<option num="9" labelLocal="Preference"/>
+		<option num="10" labelLocal="Selected Alt"/>
+		<option num="11" labelLocal="Tab"/>
+		<option num="12" labelLocal="Test"/>
+		<option num="13" labelLocal="Cardboard"/>
+	</arg>
+	<arg num="3" nameLocal="Scheme" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="4" nameLocal="Mime Type" dataType="str" optional="true" privacy="public" contentType="str"/>
+</event>
+<event code="411" nameLocal="Device Boot" catNameLocal="System" argCount="0"/>
+<event code="413" nameLocal="Device Shutdown" catNameLocal="System" argCount="0"/>
+<event code="422" nameLocal="Device Storage Low" catNameLocal="System" argCount="0"/>
+<event code="429" nameLocal="Locale Changed" catNameLocal="System" argCount="0"/>
+<event code="450" nameLocal="New Package" catNameLocal="System" argCount="1">
+	<arg num="0" nameLocal="Name" dataType="str" optional="true" privacy="public" contentType="str"/>
+</event>
+<event code="451" nameLocal="Package Removed" catNameLocal="System" argCount="1">
+	<arg num="0" nameLocal="Name" dataType="str" optional="true" privacy="public" contentType="str"/>
+</event>
+<event code="453" nameLocal="Package Updated" catNameLocal="System" argCount="1">
+	<arg num="0" nameLocal="Name" dataType="str" optional="true" privacy="public" contentType="str"/>
+</event>
+<event code="307" nameLocal="Monitor Start" catNameLocal="Tasker" argCount="0"/>
+<event code="303" nameLocal="Timer Change" catNameLocal="Tasker" argCount="2">
+	<arg num="0" nameLocal="Task" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Started"/>
+		<option num="1" labelLocal="Paused"/>
+		<option num="2" labelLocal="Restarted"/>
+		<option num="3" labelLocal="Reset"/>
+		<option num="4" labelLocal="Stopped"/>
+		<option num="5" labelLocal="Any"/>
+	</arg>
+</event>
+<event code="460" nameLocal="Wallpaper Changed" catNameLocal="System" argCount="0"/>
+<event code="3060" nameLocal="Variable Cleared" catNameLocal="Variables" argCount="2">
+	<arg num="0" nameLocal="Variable" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="User Variables Only" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</event>
+<event code="3050" nameLocal="Variable Set" catNameLocal="Variables" argCount="3">
+	<arg num="0" nameLocal="Variable" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Value" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="User Variables Only" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</event>
+<event code="462" nameLocal="Button Widget Clicked" catNameLocal="UI" argCount="4">
+	<arg num="0" nameLocal="Label" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Button Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Any"/>
+		<option num="1" labelLocal="Simple"/>
+		<option num="2" labelLocal="Image"/>
+		<option num="3" labelLocal="Toggle"/>
+		<option num="4" labelLocal="Checkbox"/>
+		<option num="5" labelLocal="Other"/>
+		<option num="6" labelLocal="Launcher"/>
+	</arg>
+	<arg num="2" nameLocal="Click Length" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Any"/>
+		<option num="1" labelLocal="Short"/>
+		<option num="2" labelLocal="Long"/>
+	</arg>
+	<arg num="3" nameLocal="New Button State" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Any"/>
+		<option num="1" labelLocal="Off"/>
+		<option num="2" labelLocal="On"/>
+	</arg>
+</event>
+<event code="201" nameLocal="Assistance Request" catNameLocal="UI" argCount="1">
+	<arg num="0" nameLocal="App" dataType="app" optional="false" privacy="public" contentType="app"/>
+</event>
+<event code="3071" nameLocal="Zoom Click" catNameLocal="UI" argCount="2">
+	<arg num="0" nameLocal="Widget Name" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Element Name" dataType="str" optional="true" privacy="public" contentType="str"/>
+</event>
+<event code="463" nameLocal="New Window" catNameLocal="UI" argCount="2">
+	<arg num="0" nameLocal="Label" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Window Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Any"/>
+		<option num="1" labelLocal="Dialog"/>
+		<option num="2" labelLocal="Full Screen"/>
+	</arg>
+</event>
+<event code="461" nameLocal="Notification" catNameLocal="UI" argCount="2">
+	<arg num="0" nameLocal="Owner Application" dataType="app" optional="false" privacy="public" contentType="app"/>
+	<arg num="1" nameLocal="Title" dataType="str" optional="true" privacy="public" contentType="str"/>
+</event>
+<event code="2000" nameLocal="Notification Click" catNameLocal="UI" argCount="2">
+	<arg num="0" nameLocal="Owner Application" dataType="app" optional="false" privacy="public" contentType="app"/>
+	<arg num="1" nameLocal="Title" dataType="str" optional="true" privacy="public" contentType="str"/>
+</event>
+<event code="2050" nameLocal="Quick Setting Clicked" catNameLocal="System" argCount="1">
+	<arg num="0" nameLocal="Label" dataType="str" optional="true" privacy="public" contentType="str"/>
+</event>
+<event code="425" nameLocal="K9 Email Received" catNameLocal="3rd Party" argCount="3">
+	<arg num="0" nameLocal="From" dataType="str" optional="true" privacy="private" contentType="str"/>
+	<arg num="1" nameLocal="Subject" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Receiving Account" dataType="str" optional="true" privacy="private" contentType="str"/>
+</event>
+<event code="446" nameLocal="Gentle Alarm" catNameLocal="3rd Party" argCount="5">
+	<arg num="0" nameLocal="Event" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Alarm Begin"/>
+		<option num="1" labelLocal="Alarm Snoozed"/>
+		<option num="2" labelLocal="Alarm Dismissed"/>
+	</arg>
+	<arg num="1" nameLocal="Name" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Message" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="3" nameLocal="Profile" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="4" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Main"/>
+		<option num="1" labelLocal="Pre Alarm"/>
+		<option num="2" labelLocal="Snooze"/>
+		<option num="3" labelLocal="Safe Alarm"/>
+		<option num="4" labelLocal="Any"/>
+	</arg>
+</event>
+<event code="428" nameLocal="Kaloer Clock" catNameLocal="3rd Party" argCount="2">
+	<arg num="0" nameLocal="Event" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Started"/>
+		<option num="1" labelLocal="Dismissed"/>
+		<option num="2" labelLocal="Snoozed"/>
+	</arg>
+	<arg num="1" nameLocal="Name" dataType="str" optional="true" privacy="public" contentType="str"/>
+</event>
+<event code="448" nameLocal="Notify My Android" catNameLocal="3rd Party" argCount="4">
+	<arg num="0" nameLocal="App" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Event" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Description" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="3" nameLocal="URL" dataType="str" optional="true" privacy="public" contentType="str"/>
+</event>
+<event code="444" nameLocal="Pomodroido" catNameLocal="3rd Party" argCount="1">
+	<arg num="0" nameLocal="Event" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Started"/>
+		<option num="1" labelLocal="Stopped"/>
+	</arg>
+</event>
+<event code="445" nameLocal="Radardroid" catNameLocal="3rd Party" argCount="1">
+	<arg num="0" nameLocal="Event" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Started"/>
+		<option num="1" labelLocal="Stopped"/>
+	</arg>
+</event>
+<event code="447" nameLocal="Reddit Notify" catNameLocal="3rd Party" argCount="3">
+	<arg num="0" nameLocal="Event" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Inbox Change"/>
+		<option num="1" labelLocal="Moderator Mail Change"/>
+		<option num="2" labelLocal="Link Karma Change"/>
+		<option num="3" labelLocal="Comment Karma Change"/>
+	</arg>
+	<arg num="1" nameLocal="Number" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="Message" dataType="str" optional="true" privacy="public" contentType="str"/>
+</event>
+<event code="424" nameLocal="Screebl / TSC" catNameLocal="3rd Party" argCount="1">
+	<arg num="0" nameLocal="Within Range" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Yes"/>
+		<option num="1" labelLocal="No"/>
+	</arg>
+</event>
+<event code="426" nameLocal="Widget Locker" catNameLocal="3rd Party" argCount="1">
+	<arg num="0" nameLocal="Event" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Locked"/>
+		<option num="1" labelLocal="Unlocked"/>
+		<option num="2" labelLocal="Hidden"/>
+	</arg>
+</event>
+<event code="427" nameLocal="OpenWatch" catNameLocal="3rd Party" argCount="1">
+	<arg num="0" nameLocal="Event" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Play / Pause"/>
+		<option num="1" labelLocal="Fast Forward"/>
+		<option num="2" labelLocal="Rewind"/>
+		<option num="3" labelLocal="Volume Up"/>
+		<option num="4" labelLocal="Volume Down"/>
+	</arg>
+</event>
+<action code="115" nameLocal="[REMOVED] Test" catNameLocal="" argCount="3">
+	<arg num="0" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="Data" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Store Result In" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="411" nameLocal="[REMOVED] Deprecated" catNameLocal="" argCount="1">
+	<arg num="0" nameLocal="Deprecated" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="151" nameLocal="[REMOVED] Deprecated" catNameLocal="" argCount="3">
+	<arg num="0" nameLocal="Deprecated" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="1" nameLocal="Deprecated" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="2" nameLocal="Deprecated" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="594" nameLocal="[REMOVED] Deprecated" catNameLocal="" argCount="0"/>
+<action code="876" nameLocal="[REMOVED] Deprecated" catNameLocal="" argCount="0"/>
+<action code="500" nameLocal="[REMOVED] Deprecated" catNameLocal="" argCount="0"/>
+<action code="510" nameLocal="[REMOVED] Deprecated" catNameLocal="" argCount="0"/>
+<action code="520" nameLocal="[REMOVED] Deprecated" catNameLocal="" argCount="0"/>
+<action code="777" nameLocal="[REMOVED] Deprecated" catNameLocal="" argCount="0"/>
+<action code="540" nameLocal="[REMOVED] Deprecated" catNameLocal="" argCount="0"/>
+<action code="530" nameLocal="[REMOVED] Deprecated" catNameLocal="" argCount="0"/>
+<action code="696" nameLocal="[REMOVED] Deprecated" catNameLocal="" argCount="0"/>
+<action code="557" nameLocal="[REMOVED] Deprecated" catNameLocal="" argCount="0"/>
+<action code="548" nameLocal="Flash" catNameLocal="Alert" argCount="2">
+	<arg num="0" nameLocal="Text" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Long" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="343" nameLocal="Test Media" catNameLocal="Media" argCount="3">
+	<arg num="0" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Music File Artist Tag"/>
+		<option num="1" labelLocal="Music File Duration Tag"/>
+		<option num="2" labelLocal="Music File Title Tag"/>
+	</arg>
+	<arg num="1" nameLocal="Data" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Store Result In" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="156" nameLocal="MIDI Play" catNameLocal="Media" argCount="4">
+	<arg num="0" nameLocal="Format" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Tasker"/>
+	</arg>
+	<arg num="1" nameLocal="Locality" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="English"/>
+		<option num="1" labelLocal="German"/>
+	</arg>
+	<arg num="2" nameLocal="Beat Timing" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="3" nameLocal="Score" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="523" nameLocal="Notify" catNameLocal="Alert" argCount="6">
+	<arg num="0" nameLocal="Title" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Text" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Icon" dataType="icon" optional="false" privacy="public" contentType="icon"/>
+	<arg num="3" nameLocal="Number" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="4" nameLocal="Permanent" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="5" nameLocal="Priority" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="525" nameLocal="Notify LED" catNameLocal="Alert" argCount="7">
+	<arg num="0" nameLocal="Title" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Text" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Icon" dataType="icon" optional="false" privacy="public" contentType="icon"/>
+	<arg num="3" nameLocal="Number" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="4" nameLocal="Colour" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Red"/>
+		<option num="1" labelLocal="Green"/>
+		<option num="2" labelLocal="Blue"/>
+		<option num="3" labelLocal="Yellow"/>
+		<option num="4" labelLocal="Turquoise"/>
+		<option num="5" labelLocal="Purple"/>
+		<option num="6" labelLocal="Orange"/>
+		<option num="7" labelLocal="Pink"/>
+		<option num="8" labelLocal="White"/>
+	</arg>
+	<arg num="5" nameLocal="Rate" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="6" nameLocal="Priority" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="538" nameLocal="Notify Sound" catNameLocal="Alert" argCount="6">
+	<arg num="0" nameLocal="Title" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Text" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Icon" dataType="icon" optional="false" privacy="public" contentType="icon"/>
+	<arg num="3" nameLocal="Number" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="4" nameLocal="Sound File" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="5" nameLocal="Priority" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="536" nameLocal="Notify Vibrate" catNameLocal="Alert" argCount="6">
+	<arg num="0" nameLocal="Title" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Text" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Icon" dataType="icon" optional="false" privacy="public" contentType="icon"/>
+	<arg num="3" nameLocal="Number" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="4" nameLocal="Pattern" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="5" nameLocal="Priority" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="551" nameLocal="Menu" catNameLocal="Alert" argCount="5">
+	<arg num="0" nameLocal="Title" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Background Image" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Layout" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="3" nameLocal="Timeout (Seconds)" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="4" nameLocal="Show Over Keyguard" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="779" nameLocal="Notify Cancel" catNameLocal="Alert" argCount="2">
+	<arg num="0" nameLocal="Title" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Warn Not Exist" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="550" nameLocal="Popup" catNameLocal="Alert" argCount="6">
+	<arg num="0" nameLocal="Title" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Text" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Background Image" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="3" nameLocal="Layout" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="4" nameLocal="Timeout (Seconds)" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="5" nameLocal="Show Over Keyguard" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="941" nameLocal="HTML Popup" catNameLocal="Alert" argCount="4">
+	<arg num="0" nameLocal="Code" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Layout" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Timeout (Seconds)" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="3" nameLocal="Show Over Keyguard" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="552" nameLocal="Popup Task Buttons" catNameLocal="Alert" argCount="9">
+	<arg num="0" nameLocal="Text" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Mode" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Icon"/>
+		<option num="1" labelLocal="Text"/>
+		<option num="2" labelLocal="Icon and Text"/>
+	</arg>
+	<arg num="2" nameLocal="Task" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="3" nameLocal="Task" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="4" nameLocal="Task" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="5" nameLocal="Background Image" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="6" nameLocal="Layout" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="7" nameLocal="Timeout (Seconds)" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="8" nameLocal="Show Over Keyguard" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="999" nameLocal="Set Light" catNameLocal="Alert" argCount="2">
+	<arg num="0" nameLocal="Set" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="To" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="511" nameLocal="Torch" catNameLocal="Alert" argCount="1">
+	<arg num="0" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="61" nameLocal="Vibrate" catNameLocal="Alert" argCount="1">
+	<arg num="0" nameLocal="Time" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="62" nameLocal="Vibrate Pattern" catNameLocal="Alert" argCount="1">
+	<arg num="0" nameLocal="Pattern" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="344" nameLocal="Test App" catNameLocal="App" argCount="3">
+	<arg num="0" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Calendar Calendar"/>
+		<option num="1" labelLocal="Calendar Title"/>
+		<option num="2" labelLocal="Calendar Description"/>
+		<option num="3" labelLocal="Calendar Location"/>
+		<option num="4" labelLocal="Calendar Start (Seconds)"/>
+		<option num="5" labelLocal="Calendar End (Seconds)"/>
+		<option num="6" labelLocal="Calendar All Day"/>
+		<option num="7" labelLocal="Calendar Available"/>
+		<option num="8" labelLocal="Package Name"/>
+		<option num="9" labelLocal="Package Version"/>
+		<option num="10" labelLocal="Package Version Label"/>
+	</arg>
+	<arg num="1" nameLocal="Data" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Store Result In" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="815" nameLocal="List Apps" catNameLocal="App" argCount="3">
+	<arg num="0" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Package"/>
+		<option num="1" labelLocal="App"/>
+		<option num="2" labelLocal="Activity"/>
+		<option num="3" labelLocal="Receiver"/>
+		<option num="4" labelLocal="Services"/>
+		<option num="5" labelLocal="Provider"/>
+	</arg>
+	<arg num="1" nameLocal="Match" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Store Result In" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="349" nameLocal="Test System" catNameLocal="System" argCount="3">
+	<arg num="0" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Android ID"/>
+		<option num="1" labelLocal="User ID"/>
+	</arg>
+	<arg num="1" nameLocal="Data" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Store Result In" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="566" nameLocal="Set Alarm" catNameLocal="System" argCount="4">
+	<arg num="0" nameLocal="Hours" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="Minutes" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="Message" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="3" nameLocal="Confirm" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="543" nameLocal="Start System Timer" catNameLocal="System" argCount="3">
+	<arg num="0" nameLocal="Seconds" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="Message" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Show UI" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="567" nameLocal="Calendar Insert" catNameLocal="App" argCount="7">
+	<arg num="0" nameLocal="In / For (Minutes)" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Calendar" dataType="str" optional="false" privacy="private" contentType="str"/>
+	<arg num="2" nameLocal="Title" dataType="str" optional="false" privacy="private" contentType="str"/>
+	<arg num="3" nameLocal="Description" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="4" nameLocal="Location" dataType="str" optional="true" privacy="private" contentType="str"/>
+	<arg num="5" nameLocal="Available" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="6" nameLocal="All Day" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="25" nameLocal="Go Home" catNameLocal="App" argCount="1">
+	<arg num="0" nameLocal="Page" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="18" nameLocal="Kill App" catNameLocal="App" argCount="2">
+	<arg num="0" nameLocal="App" dataType="app" optional="false" privacy="public" contentType="app"/>
+	<arg num="1" nameLocal="Use Root" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="20" nameLocal="Launch App" catNameLocal="App" argCount="4">
+	<arg num="0" nameLocal="App" dataType="app" optional="false" privacy="public" contentType="app"/>
+	<arg num="1" nameLocal="Data" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Exclude From Recent Apps" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="3" nameLocal="Always Start New Copy" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="22" nameLocal="Load Last App" catNameLocal="App" argCount="0"/>
+<action code="119" nameLocal="Open Map" catNameLocal="Location" argCount="5">
+	<arg num="0" nameLocal="Mode" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Point"/>
+		<option num="1" labelLocal="StreetView"/>
+		<option num="2" labelLocal="Navigate To"/>
+	</arg>
+	<arg num="1" nameLocal="Address" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Lat,Long" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="3" nameLocal="Zoom" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="4" nameLocal="Label" dataType="str" optional="true" privacy="public" contentType="str"/>
+</action>
+<action code="303" nameLocal="Alarm Volume" catNameLocal="Audio" argCount="3">
+	<arg num="0" nameLocal="Level" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="Display" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="2" nameLocal="Sound" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="311" nameLocal="BT Voice Volume" catNameLocal="Audio" argCount="3">
+	<arg num="0" nameLocal="Level" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="Display" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="2" nameLocal="Sound" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="309" nameLocal="DTMF Volume" catNameLocal="Audio" argCount="3">
+	<arg num="0" nameLocal="Level" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="Display" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="2" nameLocal="Sound" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="177" nameLocal="Haptic Feedback" catNameLocal="Audio" argCount="1">
+	<arg num="0" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="306" nameLocal="In-Call Volume" catNameLocal="Audio" argCount="3">
+	<arg num="0" nameLocal="Level" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="Display" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="2" nameLocal="Sound" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="307" nameLocal="Media Volume" catNameLocal="Audio" argCount="3">
+	<arg num="0" nameLocal="Level" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="Display" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="2" nameLocal="Sound" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="301" nameLocal="Mic Mute" catNameLocal="Audio" argCount="1">
+	<arg num="0" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="259" nameLocal="Notification Pulse" catNameLocal="Audio" argCount="1">
+	<arg num="0" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="305" nameLocal="Notification Volume" catNameLocal="Audio" argCount="3">
+	<arg num="0" nameLocal="Level" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="Display" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="2" nameLocal="Sound" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="258" nameLocal="Vibrate On Notify" catNameLocal="Audio" argCount="1">
+	<arg num="0" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="304" nameLocal="Ringer Volume" catNameLocal="Audio" argCount="3">
+	<arg num="0" nameLocal="Level" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="Display" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="2" nameLocal="Sound" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="256" nameLocal="Vibrate On Ringer" catNameLocal="Audio" argCount="1">
+	<arg num="0" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="308" nameLocal="System Volume" catNameLocal="Audio" argCount="3">
+	<arg num="0" nameLocal="Level" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="Display" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="2" nameLocal="Sound" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="312" nameLocal="Do Not Disturb" catNameLocal="Audio" argCount="1">
+	<arg num="0" nameLocal="Mode" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="None"/>
+		<option num="1" labelLocal="Priority"/>
+		<option num="2" labelLocal="All"/>
+		<option num="3" labelLocal="Alarms"/>
+	</arg>
+</action>
+<action code="310" nameLocal="Silent Mode" catNameLocal="Audio" argCount="1">
+	<arg num="0" nameLocal="Mode" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Off"/>
+		<option num="1" labelLocal="Vibrate"/>
+	</arg>
+</action>
+<action code="136" nameLocal="Sound Effects" catNameLocal="Audio" argCount="1">
+	<arg num="0" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="254" nameLocal="Speakerphone" catNameLocal="Audio" argCount="1">
+	<arg num="0" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="200" nameLocal="All Settings" catNameLocal="Settings" argCount="0"/>
+<action code="236" nameLocal="Accessibility Settings" catNameLocal="Settings" argCount="0"/>
+<action code="199" nameLocal="Add Account Settings" catNameLocal="Settings" argCount="0"/>
+<action code="201" nameLocal="Airplane Mode Settings" catNameLocal="Settings" argCount="0"/>
+<action code="202" nameLocal="APN Settings" catNameLocal="Settings" argCount="0"/>
+<action code="216" nameLocal="App Settings" catNameLocal="Settings" argCount="0"/>
+<action code="251" nameLocal="Battery Info" catNameLocal="Settings" argCount="0"/>
+<action code="226" nameLocal="App Manage Settings" catNameLocal="Settings" argCount="0"/>
+<action code="218" nameLocal="Bluetooth Settings" catNameLocal="Settings" argCount="0"/>
+<action code="203" nameLocal="Date Settings" catNameLocal="Settings" argCount="0"/>
+<action code="198" nameLocal="Device Info Settings" catNameLocal="Settings" argCount="0"/>
+<action code="959" nameLocal="Dream Settings" catNameLocal="Settings" argCount="0"/>
+<action code="234" nameLocal="Dictionary Settings" catNameLocal="Settings" argCount="0"/>
+<action code="222" nameLocal="Display Settings" catNameLocal="Settings" argCount="0"/>
+<action code="210" nameLocal="InputMethod Settings" catNameLocal="Settings" argCount="0"/>
+<action code="204" nameLocal="Internal Storage Settings" catNameLocal="Settings" argCount="0"/>
+<action code="224" nameLocal="Locale Settings" catNameLocal="Settings" argCount="0"/>
+<action code="208" nameLocal="Location Settings" catNameLocal="Settings" argCount="0"/>
+<action code="227" nameLocal="Memory Card Settings" catNameLocal="Settings" argCount="0"/>
+<action code="228" nameLocal="Network Operator Settings" catNameLocal="Settings" argCount="0"/>
+<action code="956" nameLocal="NFC Settings" catNameLocal="Settings" argCount="0"/>
+<action code="958" nameLocal="NFC Payment Settings" catNameLocal="Settings" argCount="0"/>
+<action code="957" nameLocal="Android Beam Settings" catNameLocal="Settings" argCount="0"/>
+<action code="228" nameLocal="Network Operator Settings" catNameLocal="Settings" argCount="0"/>
+<action code="257" nameLocal="Power Usage Settings" catNameLocal="Settings" argCount="0"/>
+<action code="238" nameLocal="Privacy Settings" catNameLocal="Settings" argCount="0"/>
+<action code="229" nameLocal="Quick Launch Settings" catNameLocal="Settings" argCount="0"/>
+<action code="230" nameLocal="Security Settings" catNameLocal="Settings" argCount="0"/>
+<action code="220" nameLocal="Mobile Data Settings" catNameLocal="Settings" argCount="0"/>
+<action code="231" nameLocal="Search Settings" catNameLocal="Settings" argCount="0"/>
+<action code="232" nameLocal="Sound Settings" catNameLocal="Settings" argCount="0"/>
+<action code="211" nameLocal="Sync Settings" catNameLocal="Settings" argCount="0"/>
+<action code="206" nameLocal="WIFI Settings" catNameLocal="Settings" argCount="0"/>
+<action code="212" nameLocal="WIFI IP Settings" catNameLocal="Settings" argCount="0"/>
+<action code="214" nameLocal="Wireless Settings" catNameLocal="Settings" argCount="0"/>
+<action code="348" nameLocal="Test Display" catNameLocal="Display" argCount="3">
+	<arg num="0" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="AutoRotate"/>
+		<option num="1" labelLocal="Orientation"/>
+		<option num="2" labelLocal="DPI"/>
+		<option num="3" labelLocal="Resolution"/>
+	</arg>
+	<arg num="1" nameLocal="Data" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Store Result In" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="808" nameLocal="Auto Brightness" catNameLocal="Display" argCount="1">
+	<arg num="0" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="150" nameLocal="Keyguard" catNameLocal="Display" argCount="1">
+	<arg num="0" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="15" nameLocal="Lock" catNameLocal="Display" argCount="7">
+	<arg num="0" nameLocal="Title" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Code" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Allow Cancel" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="3" nameLocal="Remember Till Off" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="4" nameLocal="Full Screen" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="5" nameLocal="Background Image" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="6" nameLocal="Layout" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="16" nameLocal="System Lock" catNameLocal="Display" argCount="0"/>
+<action code="810" nameLocal="Display Brightness" catNameLocal="Display" argCount="4">
+	<arg num="0" nameLocal="Level" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="Disable Safeguard" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="2" nameLocal="Ignore Current Level" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="3" nameLocal="Immediate Effect" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="812" nameLocal="Display Timeout" catNameLocal="Display" argCount="3">
+	<arg num="0" nameLocal="Secs" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="Mins" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="Hours" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="822" nameLocal="Display AutoRotate" catNameLocal="Display" argCount="1">
+	<arg num="0" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="109" nameLocal="Set Wallpaper" catNameLocal="Display" argCount="3">
+	<arg num="0" nameLocal="Image" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Scale" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="2" nameLocal="Crop" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="512" nameLocal="Status Bar" catNameLocal="Display" argCount="1">
+	<arg num="0" nameLocal="Set" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Expanded"/>
+		<option num="1" labelLocal="Collapsed"/>
+	</arg>
+</action>
+<action code="820" nameLocal="Stay On" catNameLocal="Display" argCount="1">
+	<arg num="0" nameLocal="Mode" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Never"/>
+		<option num="1" labelLocal="With AC Power"/>
+		<option num="2" labelLocal="With USB Power"/>
+		<option num="3" labelLocal="With AC or USB Power"/>
+	</arg>
+</action>
+<action code="806" nameLocal="Turn On" catNameLocal="Display" argCount="0"/>
+<action code="988" nameLocal="Car Mode" catNameLocal="Display" argCount="2">
+	<arg num="0" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="1" nameLocal="Go Home" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="989" nameLocal="Night Mode" catNameLocal="Display" argCount="1">
+	<arg num="0" nameLocal="Mode" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Off"/>
+		<option num="1" labelLocal="On"/>
+		<option num="2" labelLocal="Auto"/>
+	</arg>
+</action>
+<action code="342" nameLocal="Test File" catNameLocal="File" argCount="4">
+	<arg num="0" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Parent Dir"/>
+		<option num="1" labelLocal="Modified"/>
+		<option num="2" labelLocal="Name"/>
+		<option num="3" labelLocal="Size"/>
+		<option num="4" labelLocal="Type"/>
+	</arg>
+	<arg num="1" nameLocal="Data" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Store Result In" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="3" nameLocal="Use Root" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="900" nameLocal="Browse Files" catNameLocal="File" argCount="3">
+	<arg num="0" nameLocal="Dir" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Match" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Include Hidden Files" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="412" nameLocal="List Files" catNameLocal="File" argCount="5">
+	<arg num="0" nameLocal="Dir" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Match" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Include Hidden Files" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="3" nameLocal="Use Root" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="4" nameLocal="Variable" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="409" nameLocal="Create Directory" catNameLocal="File" argCount="3">
+	<arg num="0" nameLocal="Dir" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Create All" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="2" nameLocal="Use Root" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="408" nameLocal="Delete Directory" catNameLocal="File" argCount="3">
+	<arg num="0" nameLocal="Dir" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Recurse" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="2" nameLocal="Use Root" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="405" nameLocal="Copy Dir" catNameLocal="File" argCount="3">
+	<arg num="0" nameLocal="From" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="To" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Use Root" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="404" nameLocal="Copy File" catNameLocal="File" argCount="3">
+	<arg num="0" nameLocal="From" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="To" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Use Root" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="406" nameLocal="Delete File" catNameLocal="File" argCount="3">
+	<arg num="0" nameLocal="File" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Shred Level" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="Use Root" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="400" nameLocal="Move" catNameLocal="File" argCount="3">
+	<arg num="0" nameLocal="From" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="To" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Use Root" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="102" nameLocal="Open File" catNameLocal="File" argCount="2">
+	<arg num="0" nameLocal="File" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Mime Type" dataType="str" optional="true" privacy="public" contentType="str"/>
+</action>
+<action code="417" nameLocal="Read File" catNameLocal="File" argCount="2">
+	<arg num="0" nameLocal="File" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="To Var" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="776" nameLocal="Read Binary" catNameLocal="File" argCount="2">
+	<arg num="0" nameLocal="File" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="To Var" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="775" nameLocal="Write Binary" catNameLocal="File" argCount="2">
+	<arg num="0" nameLocal="Variable" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="File" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="415" nameLocal="Read Line" catNameLocal="File" argCount="3">
+	<arg num="0" nameLocal="File" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Line" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="To Var" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="416" nameLocal="Read Paragraph" catNameLocal="File" argCount="3">
+	<arg num="0" nameLocal="File" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Para" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="To Var" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="410" nameLocal="Write File" catNameLocal="File" argCount="4">
+	<arg num="0" nameLocal="File" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Text" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Append" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="3" nameLocal="Add Newline" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="422" nameLocal="UnZip" catNameLocal="File" argCount="2">
+	<arg num="0" nameLocal="File" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Delete Zip" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="420" nameLocal="Zip" catNameLocal="File" argCount="4">
+	<arg num="0" nameLocal="File" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Delete Orig" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="2" nameLocal="Level" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="3" nameLocal="Output File" dataType="str" optional="true" privacy="public" contentType="str"/>
+</action>
+<action code="476" nameLocal="GUnzip" catNameLocal="File" argCount="2">
+	<arg num="0" nameLocal="File" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Delete Zip" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="475" nameLocal="GZip" catNameLocal="File" argCount="2">
+	<arg num="0" nameLocal="File" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Delete Orig" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="513" nameLocal="Close System Dialogs" catNameLocal="Input" argCount="0"/>
+<action code="703" nameLocal="Button" catNameLocal="Input" argCount="1">
+	<arg num="0" nameLocal="Button" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Back"/>
+		<option num="1" labelLocal="Call"/>
+		<option num="2" labelLocal="Camera"/>
+		<option num="3" labelLocal="End Call"/>
+		<option num="4" labelLocal="Menu"/>
+		<option num="5" labelLocal="Volume Down"/>
+		<option num="6" labelLocal="Volume Up"/>
+		<option num="7" labelLocal="Search"/>
+	</arg>
+</action>
+<action code="701" nameLocal="Dpad" catNameLocal="Input" argCount="2">
+	<arg num="0" nameLocal="Button" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Up"/>
+		<option num="1" labelLocal="Down"/>
+		<option num="2" labelLocal="Left"/>
+		<option num="3" labelLocal="Right"/>
+		<option num="4" labelLocal="Press"/>
+	</arg>
+	<arg num="1" nameLocal="Repeat Times" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="702" nameLocal="Type" catNameLocal="Input" argCount="2">
+	<arg num="0" nameLocal="Text" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Repeat Times" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="903" nameLocal="Get Voice" catNameLocal="Input" argCount="5">
+	<arg num="0" nameLocal="Title" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Language Model" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Free Form"/>
+		<option num="1" labelLocal="Web Search"/>
+	</arg>
+	<arg num="2" nameLocal="Language" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="3" nameLocal="Maximum Results" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="4" nameLocal="Timeout (Seconds)" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="804" nameLocal="Input Method Select" catNameLocal="Input" argCount="0"/>
+<action code="987" nameLocal="Soft Keyboard" catNameLocal="Input" argCount="0"/>
+<action code="904" nameLocal="Voice Command" catNameLocal="Input" argCount="0"/>
+<action code="443" nameLocal="Media Control" catNameLocal="Media" argCount="3">
+	<arg num="0" nameLocal="Cmd" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Next"/>
+		<option num="1" labelLocal="Pause"/>
+		<option num="2" labelLocal="Previous"/>
+		<option num="3" labelLocal="Toggle Pause"/>
+		<option num="4" labelLocal="Stop"/>
+		<option num="5" labelLocal="Play [Simulated Only]"/>
+	</arg>
+	<arg num="1" nameLocal="Simulate Media Button" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="2" nameLocal="App" dataType="app" optional="false" privacy="public" contentType="app"/>
+</action>
+<action code="189" nameLocal="Crop Image" catNameLocal="Image" argCount="4">
+	<arg num="0" nameLocal="From Left (%)" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="From Right (%)" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="From Top (%)" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="3" nameLocal="From Bottom (%)" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="190" nameLocal="Flip Image" catNameLocal="Image" argCount="1">
+	<arg num="0" nameLocal="Direction" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Horizontal"/>
+		<option num="1" labelLocal="Vertical"/>
+	</arg>
+</action>
+<action code="193" nameLocal="Resize Image" catNameLocal="Image" argCount="2">
+	<arg num="0" nameLocal="Width" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="Height" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="188" nameLocal="Load Image" catNameLocal="Image" argCount="3">
+	<arg num="0" nameLocal="Source" dataType="icon" optional="true" privacy="public" contentType="icon"/>
+	<arg num="1" nameLocal="Max Width Or Height" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="Respect EXIF Orientation" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="185" nameLocal="Filter Image" catNameLocal="Image" argCount="2">
+	<arg num="0" nameLocal="Mode" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Black and White"/>
+		<option num="1" labelLocal="Enhance Blue"/>
+		<option num="2" labelLocal="Enhance Green"/>
+		<option num="3" labelLocal="Enhance Red"/>
+		<option num="4" labelLocal="Greyscale"/>
+		<option num="5" labelLocal="Set Alpha"/>
+	</arg>
+	<arg num="1" nameLocal="Value" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="187" nameLocal="Save Image" catNameLocal="Image" argCount="3">
+	<arg num="0" nameLocal="File" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Image Quality" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="Delete From Memory After" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="191" nameLocal="Rotate Image" catNameLocal="Image" argCount="2">
+	<arg num="0" nameLocal="Direction" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Left"/>
+		<option num="1" labelLocal="Right"/>
+	</arg>
+	<arg num="1" nameLocal="Degrees" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="45"/>
+		<option num="1" labelLocal="90"/>
+		<option num="2" labelLocal="135"/>
+		<option num="3" labelLocal="180"/>
+	</arg>
+</action>
+<action code="490" nameLocal="Media Button Events" catNameLocal="Media" argCount="1">
+	<arg num="0" nameLocal="Action" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Grab"/>
+		<option num="1" labelLocal="Release"/>
+	</arg>
+</action>
+<action code="445" nameLocal="Music Play" catNameLocal="Media" argCount="4">
+	<arg num="0" nameLocal="File" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Start" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="Loop" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="3" nameLocal="Stream" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Call"/>
+		<option num="1" labelLocal="System"/>
+		<option num="2" labelLocal="Ringer"/>
+		<option num="3" labelLocal="Media"/>
+		<option num="4" labelLocal="Alarm"/>
+		<option num="5" labelLocal="Notification"/>
+	</arg>
+</action>
+<action code="447" nameLocal="Music Play Dir" catNameLocal="Media" argCount="6">
+	<arg num="0" nameLocal="Dir" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Subdirs" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="2" nameLocal="Audio Only" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="3" nameLocal="Random" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="4" nameLocal="Flash" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="5" nameLocal="Maximum Tracks" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="451" nameLocal="Music Skip" catNameLocal="Media" argCount="1">
+	<arg num="0" nameLocal="Jump" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="453" nameLocal="Music Back" catNameLocal="Media" argCount="1">
+	<arg num="0" nameLocal="Jump" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="449" nameLocal="Music Stop" catNameLocal="Media" argCount="1">
+	<arg num="0" nameLocal="Clear Dir" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="171" nameLocal="Beep" catNameLocal="Alert" argCount="4">
+	<arg num="0" nameLocal="Frequency" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="Duration" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="Amplitude" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="3" nameLocal="Stream" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Call"/>
+		<option num="1" labelLocal="System"/>
+		<option num="2" labelLocal="Ringer"/>
+		<option num="3" labelLocal="Media"/>
+		<option num="4" labelLocal="Alarm"/>
+		<option num="5" labelLocal="Notification"/>
+	</arg>
+</action>
+<action code="172" nameLocal="Morse" catNameLocal="Alert" argCount="5">
+	<arg num="0" nameLocal="Text" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Frequency" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="Speed" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="3" nameLocal="Amplitude" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="4" nameLocal="Stream" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Call"/>
+		<option num="1" labelLocal="System"/>
+		<option num="2" labelLocal="Ringer"/>
+		<option num="3" labelLocal="Media"/>
+		<option num="4" labelLocal="Alarm"/>
+		<option num="5" labelLocal="Notification"/>
+	</arg>
+</action>
+<action code="192" nameLocal="Play Ringtone" catNameLocal="Media" argCount="3">
+	<arg num="0" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Alarm"/>
+		<option num="1" labelLocal="Notification"/>
+		<option num="2" labelLocal="Ringer"/>
+	</arg>
+	<arg num="1" nameLocal="Sound" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Stream" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Call"/>
+		<option num="1" labelLocal="System"/>
+		<option num="2" labelLocal="Ringer"/>
+		<option num="3" labelLocal="Media"/>
+		<option num="4" labelLocal="Alarm"/>
+		<option num="5" labelLocal="Notification"/>
+	</arg>
+</action>
+<action code="101" nameLocal="Take Photo" catNameLocal="Media" argCount="10">
+	<arg num="0" nameLocal="Camera" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Rear"/>
+		<option num="1" labelLocal="Front"/>
+	</arg>
+	<arg num="1" nameLocal="Filename" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Naming Sequence" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="None"/>
+		<option num="1" labelLocal="Series"/>
+		<option num="2" labelLocal="Chronological"/>
+	</arg>
+	<arg num="3" nameLocal="Insert In Gallery" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="4" nameLocal="Discreet" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="5" nameLocal="Resolution" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="6" nameLocal="Scene Mode" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Auto"/>
+		<option num="1" labelLocal="Action"/>
+		<option num="2" labelLocal="Barcode"/>
+		<option num="3" labelLocal="Beach"/>
+		<option num="4" labelLocal="Candlelight"/>
+		<option num="5" labelLocal="Fireworks"/>
+		<option num="6" labelLocal="Landscape"/>
+		<option num="7" labelLocal="Night"/>
+		<option num="8" labelLocal="Night Portrait"/>
+		<option num="9" labelLocal="Party"/>
+		<option num="10" labelLocal="Portrait"/>
+		<option num="11" labelLocal="Snow"/>
+		<option num="12" labelLocal="Sports"/>
+		<option num="13" labelLocal="Steady"/>
+		<option num="14" labelLocal="Sunset"/>
+		<option num="15" labelLocal="Theatre"/>
+	</arg>
+	<arg num="7" nameLocal="White Balance" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Auto"/>
+		<option num="1" labelLocal="Cloudy"/>
+		<option num="2" labelLocal="Daylight"/>
+		<option num="3" labelLocal="Fluorescent"/>
+		<option num="4" labelLocal="Incandescent"/>
+		<option num="5" labelLocal="Shade"/>
+		<option num="6" labelLocal="Twilight"/>
+		<option num="7" labelLocal="Warm Fluorescent"/>
+	</arg>
+	<arg num="8" nameLocal="Flash Mode" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Auto"/>
+		<option num="1" labelLocal="Off"/>
+		<option num="2" labelLocal="On"/>
+		<option num="3" labelLocal="Red Eye"/>
+		<option num="4" labelLocal="Torch"/>
+	</arg>
+	<arg num="9" nameLocal="Focus Mode" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Auto"/>
+		<option num="1" labelLocal="Fixed"/>
+		<option num="2" labelLocal="Macro"/>
+		<option num="3" labelLocal="Infinity"/>
+		<option num="4" labelLocal="EDOF"/>
+		<option num="5" labelLocal="Continuous"/>
+	</arg>
+</action>
+<action code="455" nameLocal="Record Audio" catNameLocal="Media" argCount="5">
+	<arg num="0" nameLocal="File" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Source" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Default"/>
+		<option num="1" labelLocal="Microphone"/>
+		<option num="2" labelLocal="Call Outgoing"/>
+		<option num="3" labelLocal="Call Incoming"/>
+		<option num="4" labelLocal="Call"/>
+	</arg>
+	<arg num="2" nameLocal="MaxSize" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="3" nameLocal="Codec" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="AMR Narrowband"/>
+		<option num="1" labelLocal="AMR Wideband"/>
+		<option num="2" labelLocal="AAC"/>
+	</arg>
+	<arg num="4" nameLocal="Format" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="MP4"/>
+		<option num="1" labelLocal="3GPP"/>
+		<option num="2" labelLocal="AMR Narrowband"/>
+		<option num="3" labelLocal="AMR Wideband"/>
+		<option num="4" labelLocal="AMR Narrowband"/>
+	</arg>
+</action>
+<action code="657" nameLocal="Record Audio Stop" catNameLocal="Media" argCount="0"/>
+<action code="457" nameLocal="Default Ringtone" catNameLocal="Audio" argCount="2">
+	<arg num="0" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Alarm"/>
+		<option num="1" labelLocal="Notification"/>
+		<option num="2" labelLocal="Ringer"/>
+	</arg>
+	<arg num="1" nameLocal="Sound" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="459" nameLocal="Scan Card" catNameLocal="Media" argCount="1">
+	<arg num="0" nameLocal="File" dataType="str" optional="true" privacy="public" contentType="str"/>
+</action>
+<action code="877" nameLocal="Send Intent" catNameLocal="System" argCount="10">
+	<arg num="0" nameLocal="Action" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Cat" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="None"/>
+		<option num="1" labelLocal="Default"/>
+		<option num="2" labelLocal="Alt"/>
+		<option num="3" labelLocal="Browsable"/>
+		<option num="4" labelLocal="Car Dock"/>
+		<option num="5" labelLocal="Desk Dock"/>
+		<option num="6" labelLocal="Home"/>
+		<option num="7" labelLocal="Info"/>
+		<option num="8" labelLocal="Launcher"/>
+		<option num="9" labelLocal="Preference"/>
+		<option num="10" labelLocal="Selected Alt"/>
+		<option num="11" labelLocal="Tab"/>
+		<option num="12" labelLocal="Test"/>
+		<option num="13" labelLocal="Cardboard"/>
+	</arg>
+	<arg num="2" nameLocal="Mime Type" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="3" nameLocal="Data" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="4" nameLocal="Extra" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="5" nameLocal="Extra" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="6" nameLocal="Extra" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="7" nameLocal="Package" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="8" nameLocal="Class" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="9" nameLocal="Target" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Broadcast Receiver"/>
+		<option num="1" labelLocal="Activity"/>
+		<option num="2" labelLocal="Service"/>
+	</arg>
+</action>
+<action code="901" nameLocal="Stop Location" catNameLocal="Location" argCount="1">
+	<arg num="0" nameLocal="Source" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="GPS"/>
+		<option num="1" labelLocal="Net"/>
+		<option num="2" labelLocal="Any"/>
+	</arg>
+</action>
+<action code="902" nameLocal="Get Location" catNameLocal="Location" argCount="4">
+	<arg num="0" nameLocal="Source" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="GPS"/>
+		<option num="1" labelLocal="Net"/>
+		<option num="2" labelLocal="Any"/>
+	</arg>
+	<arg num="1" nameLocal="Timeout (Seconds)" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="Continue Task Immediately" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="3" nameLocal="Keep Tracking" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="915" nameLocal="CPU" catNameLocal="System" argCount="4">
+	<arg num="0" nameLocal="CPU" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="0"/>
+		<option num="1" labelLocal="1"/>
+		<option num="2" labelLocal="2"/>
+		<option num="3" labelLocal="3"/>
+		<option num="4" labelLocal="4"/>
+		<option num="5" labelLocal="5"/>
+		<option num="6" labelLocal="6"/>
+		<option num="7" labelLocal="7"/>
+	</arg>
+	<arg num="1" nameLocal="Governor" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Min. Frequency" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="3" nameLocal="Max. Frequency" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="332" nameLocal="GPS" catNameLocal="Location" argCount="1">
+	<arg num="0" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="59" nameLocal="Reboot" catNameLocal="System" argCount="1">
+	<arg num="0" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Normal"/>
+		<option num="1" labelLocal="Recovery"/>
+		<option num="2" labelLocal="Bootloader"/>
+		<option num="3" labelLocal="Shutdown"/>
+	</arg>
+</action>
+<action code="112" nameLocal="Run SL4A Script" catNameLocal="Code" argCount="3">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Terminal" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="2" nameLocal="Pass Variables" dataType="str" optional="true" privacy="public" contentType="str"/>
+</action>
+<action code="664" nameLocal="Java Function" catNameLocal="Code" argCount="10">
+	<arg num="0" nameLocal="Return" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Class Or Object" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Function" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="3" nameLocal="Param" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="4" nameLocal="Param" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="5" nameLocal="Param" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="6" nameLocal="Param" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="7" nameLocal="Param" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="8" nameLocal="Param" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="9" nameLocal="Param" dataType="str" optional="true" privacy="public" contentType="str"/>
+</action>
+<action code="665" nameLocal="Java Object" catNameLocal="Code" argCount="2">
+	<arg num="0" nameLocal="Mode" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Delete"/>
+	</arg>
+	<arg num="1" nameLocal="Name" dataType="str" optional="true" privacy="public" contentType="str"/>
+</action>
+<action code="123" nameLocal="Run Shell" catNameLocal="Code" argCount="6">
+	<arg num="0" nameLocal="Command" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Timeout (Seconds)" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="Use Root" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="3" nameLocal="Store Output In" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="4" nameLocal="Store Errors In" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="5" nameLocal="Store Result In" dataType="str" optional="true" privacy="public" contentType="str"/>
+</action>
+<action code="124" nameLocal="Remount" catNameLocal="File" argCount="2">
+	<arg num="0" nameLocal="Path" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="/system"/>
+	</arg>
+	<arg num="1" nameLocal="Writeable" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="559" nameLocal="Say" catNameLocal="Alert" argCount="8">
+	<arg num="0" nameLocal="Text" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Engine:Voice" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Stream" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Call"/>
+		<option num="1" labelLocal="System"/>
+		<option num="2" labelLocal="Ringer"/>
+		<option num="3" labelLocal="Media"/>
+		<option num="4" labelLocal="Alarm"/>
+		<option num="5" labelLocal="Notification"/>
+	</arg>
+	<arg num="3" nameLocal="Pitch" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="4" nameLocal="Speed" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="5" nameLocal="Respect Audio Focus" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="6" nameLocal="Network" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="7" nameLocal="Continue Task Immediately" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="699" nameLocal="Say To File" catNameLocal="Alert" argCount="6">
+	<arg num="0" nameLocal="Text" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Engine:Voice" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="File" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="3" nameLocal="Pitch" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="4" nameLocal="Speed" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="5" nameLocal="Continue Task Immediately" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="697" nameLocal="Shut Up" catNameLocal="Alert" argCount="0"/>
+<action code="100" nameLocal="Search" catNameLocal="System" argCount="2">
+	<arg num="0" nameLocal="For" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Web Search" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="157" nameLocal="Quick Setting Add" catNameLocal="System" argCount="3">
+	<arg num="0" nameLocal="Label" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Icon" dataType="icon" optional="false" privacy="public" contentType="icon"/>
+	<arg num="2" nameLocal="Collapse Panel On Click" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="158" nameLocal="Quick Setting Remove" catNameLocal="System" argCount="1">
+	<arg num="0" nameLocal="Label" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="105" nameLocal="Set Clipboard" catNameLocal="System" argCount="2">
+	<arg num="0" nameLocal="Text" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Add" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="440" nameLocal="Set Timezone" catNameLocal="System" argCount="1">
+	<arg num="0" nameLocal="To" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="333" nameLocal="Airplane Mode" catNameLocal="Net" argCount="1">
+	<arg num="0" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="323" nameLocal="Airplane Radios" catNameLocal="Net" argCount="5">
+	<arg num="0" nameLocal="Bluetooth" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="1" nameLocal="Cell" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="2" nameLocal="NFC" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="3" nameLocal="Wifi" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="4" nameLocal="Wimax" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="331" nameLocal="Auto-Sync" catNameLocal="Net" argCount="1">
+	<arg num="0" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="294" nameLocal="Bluetooth" catNameLocal="Net" argCount="1">
+	<arg num="0" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="346" nameLocal="Test Phone" catNameLocal="Phone" argCount="3">
+	<arg num="0" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Contact Address, Home"/>
+		<option num="1" labelLocal="Contact Address, Work"/>
+		<option num="2" labelLocal="Contact Birthday"/>
+		<option num="3" labelLocal="Contact Email"/>
+		<option num="4" labelLocal="Contact Name"/>
+		<option num="5" labelLocal="Contact Nickname"/>
+		<option num="6" labelLocal="Contact Organisation"/>
+		<option num="7" labelLocal="Contact Photo URI"/>
+		<option num="8" labelLocal="Contact Thumb URI"/>
+	</arg>
+	<arg num="1" nameLocal="Data" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Store Result In" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="296" nameLocal="Bluetooth Voice" catNameLocal="Phone" argCount="1">
+	<arg num="0" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="295" nameLocal="Bluetooth ID" catNameLocal="Net" argCount="1">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="252" nameLocal="Set SMS App" catNameLocal="Phone" argCount="1">
+	<arg num="0" nameLocal="App" dataType="app" optional="false" privacy="public" contentType="app"/>
+</action>
+<action code="104" nameLocal="Browse URL" catNameLocal="Net" argCount="1">
+	<arg num="0" nameLocal="URL" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="125" nameLocal="Compose Email" catNameLocal="Net" argCount="3">
+	<arg num="0" nameLocal="Recipient(s)" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Subject" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Message" dataType="str" optional="true" privacy="public" contentType="str"/>
+</action>
+<action code="118" nameLocal="HTTP Get" catNameLocal="Net" argCount="9">
+	<arg num="0" nameLocal="Server:Port" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Path" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Attributes" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="3" nameLocal="Cookies" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="4" nameLocal="User Agent" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="5" nameLocal="Timeout" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="6" nameLocal="Mime Type" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="7" nameLocal="Output File" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="8" nameLocal="Trust Any Certificate" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="117" nameLocal="HTTP Head" catNameLocal="Net" argCount="7">
+	<arg num="0" nameLocal="Server:Port" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Path" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Attributes" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="3" nameLocal="Cookies" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="4" nameLocal="User Agent" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="5" nameLocal="Timeout" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="6" nameLocal="Trust Any Certificate" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="116" nameLocal="HTTP Post" catNameLocal="Net" argCount="9">
+	<arg num="0" nameLocal="Server:Port" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Path" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Data / File" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="3" nameLocal="Cookies" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="4" nameLocal="User Agent" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="5" nameLocal="Timeout" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="6" nameLocal="Content Type" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="7" nameLocal="Output File" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="8" nameLocal="Trust Any Certificate" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="433" nameLocal="Mobile Data" catNameLocal="Net" argCount="1">
+	<arg num="0" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="450" nameLocal="APN Droid" catNameLocal="3rd Party" argCount="3">
+	<arg num="0" nameLocal="Enable" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="1" nameLocal="Keep MMS" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="2" nameLocal="Notify" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="735" nameLocal="Mobile Data 2G/3G" catNameLocal="Net" argCount="1">
+	<arg num="0" nameLocal="Mode" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="2G Only"/>
+		<option num="1" labelLocal="3G Only"/>
+		<option num="2" labelLocal="3G Preferred"/>
+	</arg>
+</action>
+<action code="114" nameLocal="USB Tether" catNameLocal="Net" argCount="1">
+	<arg num="0" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="341" nameLocal="Test Net" catNameLocal="Net" argCount="3">
+	<arg num="0" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Connection Type"/>
+		<option num="1" labelLocal="Mobile Data Enabled"/>
+		<option num="2" labelLocal="Wifi Hidden"/>
+		<option num="3" labelLocal="Wifi MAC"/>
+		<option num="4" labelLocal="Wifi RSSI"/>
+		<option num="5" labelLocal="Wifi SSID"/>
+	</arg>
+	<arg num="1" nameLocal="Data" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Store Result In" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="425" nameLocal="WiFi" catNameLocal="Net" argCount="1">
+	<arg num="0" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="426" nameLocal="WiFi Net" catNameLocal="Net" argCount="3">
+	<arg num="0" nameLocal="Action" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Disconnect"/>
+		<option num="1" labelLocal="Reassociate"/>
+		<option num="2" labelLocal="Reconnect"/>
+	</arg>
+	<arg num="1" nameLocal="Force" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="2" nameLocal="Report Failure" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="427" nameLocal="WiFi Sleep" catNameLocal="Net" argCount="1">
+	<arg num="0" nameLocal="Policy" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Default"/>
+		<option num="1" labelLocal="Never While Plugged"/>
+		<option num="2" labelLocal="Never"/>
+	</arg>
+</action>
+<action code="113" nameLocal="WiFi Tether" catNameLocal="Net" argCount="1">
+	<arg num="0" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="439" nameLocal="WiMax" catNameLocal="Net" argCount="1">
+	<arg num="0" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="90" nameLocal="Call" catNameLocal="Phone" argCount="2">
+	<arg num="0" nameLocal="Number" dataType="str" optional="true" privacy="private" contentType="str"/>
+	<arg num="1" nameLocal="Auto Dial" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="910" nameLocal="Call Log" catNameLocal="Phone" argCount="1">
+	<arg num="0" nameLocal="Action" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="View"/>
+		<option num="1" labelLocal="Clear Missed Calls"/>
+		<option num="2" labelLocal="Clear Incoming Calls"/>
+		<option num="3" labelLocal="Clear Outgoing Calls"/>
+		<option num="4" labelLocal="Clear All"/>
+		<option num="5" labelLocal="Mark All Acknowledged"/>
+		<option num="6" labelLocal="Mark All Read"/>
+	</arg>
+</action>
+<action code="95" nameLocal="Call Block" catNameLocal="Phone" argCount="2">
+	<arg num="0" nameLocal="Number Match" dataType="str" optional="true" privacy="private" contentType="str"/>
+	<arg num="1" nameLocal="Info" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="97" nameLocal="Call Divert" catNameLocal="Phone" argCount="3">
+	<arg num="0" nameLocal="From Match" dataType="str" optional="true" privacy="private" contentType="str"/>
+	<arg num="1" nameLocal="To" dataType="str" optional="false" privacy="private" contentType="str"/>
+	<arg num="2" nameLocal="Info" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="99" nameLocal="Call Revert" catNameLocal="Phone" argCount="2">
+	<arg num="0" nameLocal="Number" dataType="str" optional="true" privacy="private" contentType="str"/>
+	<arg num="1" nameLocal="Info" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="111" nameLocal="Compose MMS" catNameLocal="Phone" argCount="4">
+	<arg num="0" nameLocal="Recipient(s)" dataType="str" optional="true" privacy="private" contentType="str"/>
+	<arg num="1" nameLocal="Subject" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Message" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="3" nameLocal="Attachment" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="250" nameLocal="Compose SMS" catNameLocal="Phone" argCount="2">
+	<arg num="0" nameLocal="Recipient(s)" dataType="str" optional="true" privacy="private" contentType="str"/>
+	<arg num="1" nameLocal="Message" dataType="str" optional="true" privacy="public" contentType="str"/>
+</action>
+<action code="909" nameLocal="Contacts" catNameLocal="Phone" argCount="1">
+	<arg num="0" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Starred"/>
+		<option num="1" labelLocal="Frequent"/>
+		<option num="2" labelLocal="Starred, Frequent"/>
+	</arg>
+</action>
+<action code="733" nameLocal="End Call" catNameLocal="Phone" argCount="0"/>
+<action code="732" nameLocal="Radio" catNameLocal="Phone" argCount="1">
+	<arg num="0" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="41" nameLocal="Send SMS" catNameLocal="Phone" argCount="3">
+	<arg num="0" nameLocal="Number" dataType="str" optional="false" privacy="private" contentType="str"/>
+	<arg num="1" nameLocal="Message" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Store In Messaging App" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="42" nameLocal="Send Data SMS" catNameLocal="Phone" argCount="3">
+	<arg num="0" nameLocal="Number" dataType="str" optional="false" privacy="private" contentType="str"/>
+	<arg num="1" nameLocal="Port" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="Data" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="734" nameLocal="Silence Ringer" catNameLocal="Phone" argCount="0"/>
+<action code="731" nameLocal="Take Call" catNameLocal="Phone" argCount="0"/>
+<action code="46" nameLocal="Create Scene" catNameLocal="Scene" argCount="1">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="69" nameLocal="Element Create" catNameLocal="Scene" argCount="4">
+	<arg num="0" nameLocal="Scene Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Button"/>
+		<option num="1" labelLocal="Checkbox"/>
+		<option num="2" labelLocal="Image"/>
+		<option num="3" labelLocal="Text"/>
+		<option num="4" labelLocal="TextEdit"/>
+		<option num="5" labelLocal="Doodle"/>
+		<option num="6" labelLocal="Map"/>
+		<option num="7" labelLocal="Menu"/>
+		<option num="8" labelLocal="Number Picker"/>
+		<option num="9" labelLocal="Oval"/>
+		<option num="10" labelLocal="Rectangle"/>
+		<option num="11" labelLocal="Slider"/>
+		<option num="12" labelLocal="Spinner"/>
+		<option num="13" labelLocal="Toggle"/>
+		<option num="14" labelLocal="WebView"/>
+	</arg>
+	<arg num="2" nameLocal="Visible" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="3" nameLocal="Content" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="73" nameLocal="Element Destroy" catNameLocal="Scene" argCount="2">
+	<arg num="0" nameLocal="Scene Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="47" nameLocal="Show Scene" catNameLocal="Scene" argCount="7">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Display As" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Overlay"/>
+		<option num="1" labelLocal="Overlay, Blocking"/>
+		<option num="2" labelLocal="Overlay, Blocking, Full Window"/>
+		<option num="3" labelLocal="Dialog"/>
+		<option num="4" labelLocal="Dialog, Dim Behind Heavy"/>
+		<option num="5" labelLocal="Dialog, Dim Behind"/>
+		<option num="6" labelLocal="Activity, Full Window"/>
+		<option num="7" labelLocal="Activity, Full Window, No Bar"/>
+		<option num="8" labelLocal="Activity, Full Display"/>
+		<option num="9" labelLocal="Activity, Full Display, No Bar"/>
+	</arg>
+	<arg num="2" nameLocal="Horizontal Position" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="3" nameLocal="Vertical Position" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="4" nameLocal="Animation" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="System"/>
+		<option num="1" labelLocal="None"/>
+		<option num="2" labelLocal="Fade"/>
+		<option num="3" labelLocal="Bottom Fade"/>
+		<option num="4" labelLocal="Left"/>
+		<option num="5" labelLocal="Right"/>
+		<option num="6" labelLocal="Top"/>
+		<option num="7" labelLocal="Bottom"/>
+		<option num="8" labelLocal="Left Roll"/>
+		<option num="9" labelLocal="Right Roll"/>
+		<option num="10" labelLocal="Scale"/>
+	</arg>
+	<arg num="5" nameLocal="Show Exit Button" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="6" nameLocal="Continue Task Immediately" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="48" nameLocal="Hide Scene" catNameLocal="Scene" argCount="2">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Animation" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="System"/>
+		<option num="1" labelLocal="None"/>
+		<option num="2" labelLocal="Fade"/>
+		<option num="3" labelLocal="Bottom Fade"/>
+		<option num="4" labelLocal="Left"/>
+		<option num="5" labelLocal="Right"/>
+		<option num="6" labelLocal="Top"/>
+		<option num="7" labelLocal="Bottom"/>
+		<option num="8" labelLocal="Left Roll"/>
+		<option num="9" labelLocal="Right Roll"/>
+		<option num="10" labelLocal="Scale"/>
+	</arg>
+</action>
+<action code="49" nameLocal="Destroy Scene" catNameLocal="Scene" argCount="1">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="194" nameLocal="Test Scene" catNameLocal="Scene" argCount="3">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Test" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Status"/>
+		<option num="1" labelLocal="Horizontal Position"/>
+		<option num="2" labelLocal="Vertical Position"/>
+		<option num="3" labelLocal="Width"/>
+		<option num="4" labelLocal="Height"/>
+	</arg>
+	<arg num="2" nameLocal="Store Result In" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="195" nameLocal="Test Element" catNameLocal="Scene" argCount="4">
+	<arg num="0" nameLocal="Scene Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Test" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Element Position"/>
+		<option num="1" labelLocal="Element Size"/>
+		<option num="2" labelLocal="Value"/>
+		<option num="3" labelLocal="Element Visibility"/>
+	</arg>
+	<arg num="3" nameLocal="Store Result In" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="60" nameLocal="Element Add GeoMarker" catNameLocal="Scene" argCount="9">
+	<arg num="0" nameLocal="Scene Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Lat,Long" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="3" nameLocal="Label" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="4" nameLocal="Text Colour" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="5" nameLocal="Text Size" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="6" nameLocal="Spot Radius (Metres)" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="7" nameLocal="Spot Colour" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="8" nameLocal="Icon" dataType="icon" optional="false" privacy="public" contentType="icon"/>
+</action>
+<action code="63" nameLocal="Element Delete GeoMarker" catNameLocal="Scene" argCount="4">
+	<arg num="0" nameLocal="Scene Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Lat,Long" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="3" nameLocal="Label" dataType="str" optional="true" privacy="public" contentType="str"/>
+</action>
+<action code="68" nameLocal="Element Focus" catNameLocal="Scene" argCount="3">
+	<arg num="0" nameLocal="Scene Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="57" nameLocal="Element Position" catNameLocal="Scene" argCount="6">
+	<arg num="0" nameLocal="Scene Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Orientation" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="All"/>
+		<option num="1" labelLocal="Portrait"/>
+		<option num="2" labelLocal="Landscape"/>
+	</arg>
+	<arg num="3" nameLocal="X" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="4" nameLocal="Y" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="5" nameLocal="Animation Time (MS)" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="58" nameLocal="Element Size" catNameLocal="Scene" argCount="6">
+	<arg num="0" nameLocal="Scene Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Orientation" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="All"/>
+		<option num="1" labelLocal="Portrait"/>
+		<option num="2" labelLocal="Landscape"/>
+	</arg>
+	<arg num="3" nameLocal="Width" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="4" nameLocal="Height" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="5" nameLocal="Animation Time (MS)" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="67" nameLocal="Element Depth" catNameLocal="Scene" argCount="3">
+	<arg num="0" nameLocal="Scene Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Set Depth" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="53" nameLocal="Element Web Control" catNameLocal="Scene" argCount="4">
+	<arg num="0" nameLocal="Scene Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Mode" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Clear Cache"/>
+		<option num="1" labelLocal="Clear History"/>
+		<option num="2" labelLocal="Find"/>
+		<option num="3" labelLocal="Find Next"/>
+		<option num="4" labelLocal="Go Back"/>
+		<option num="5" labelLocal="Go Forward"/>
+		<option num="6" labelLocal="Load URL"/>
+		<option num="7" labelLocal="Page Bottom"/>
+		<option num="8" labelLocal="Page Down"/>
+		<option num="9" labelLocal="Page Top"/>
+		<option num="10" labelLocal="Page Up"/>
+		<option num="11" labelLocal="Reload"/>
+		<option num="12" labelLocal="Show Zoom Controls"/>
+		<option num="13" labelLocal="Stop Loading"/>
+		<option num="14" labelLocal="Zoom In"/>
+		<option num="15" labelLocal="Zoom Out"/>
+	</arg>
+	<arg num="3" nameLocal="Value" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="64" nameLocal="Element Map Control" catNameLocal="Scene" argCount="4">
+	<arg num="0" nameLocal="Scene Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Mode" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Disable Compass"/>
+		<option num="1" labelLocal="Disable Rotation Gestures"/>
+		<option num="2" labelLocal="Disable Tilt Gestures"/>
+		<option num="3" labelLocal="Disable Zoom Gestures"/>
+		<option num="4" labelLocal="Enable Compass"/>
+		<option num="5" labelLocal="Enable Rotation Gestures"/>
+		<option num="6" labelLocal="Enable Tilt Gestures"/>
+		<option num="7" labelLocal="Enable Zoom Gestures"/>
+		<option num="8" labelLocal="Hide Roads"/>
+		<option num="9" labelLocal="Hide Satellite"/>
+		<option num="10" labelLocal="Hide Traffic"/>
+		<option num="11" labelLocal="Hide Zoom Controls"/>
+		<option num="12" labelLocal="Move To Marker"/>
+		<option num="13" labelLocal="Move To Marker Animated"/>
+		<option num="14" labelLocal="Move To Point"/>
+		<option num="15" labelLocal="Move To Point Animated"/>
+		<option num="16" labelLocal="Set Zoom"/>
+		<option num="17" labelLocal="Show Roads"/>
+		<option num="18" labelLocal="Show Satellite"/>
+		<option num="19" labelLocal="Show Traffic"/>
+		<option num="20" labelLocal="Show Zoom Controls"/>
+		<option num="21" labelLocal="Zoom In"/>
+		<option num="22" labelLocal="Zoom Out"/>
+	</arg>
+	<arg num="3" nameLocal="Value" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="66" nameLocal="Element Image" catNameLocal="Scene" argCount="3">
+	<arg num="0" nameLocal="Scene Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Image" dataType="icon" optional="false" privacy="public" contentType="icon"/>
+</action>
+<action code="54" nameLocal="Element Text Colour" catNameLocal="Scene" argCount="3">
+	<arg num="0" nameLocal="Scene Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Colour" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="71" nameLocal="Element Text Size" catNameLocal="Scene" argCount="3">
+	<arg num="0" nameLocal="Scene Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Text Size" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="51" nameLocal="Element Text" catNameLocal="Scene" argCount="5">
+	<arg num="0" nameLocal="Scene Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Position" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Replace Existing"/>
+		<option num="1" labelLocal="Start"/>
+		<option num="2" labelLocal="End"/>
+	</arg>
+	<arg num="3" nameLocal="Text" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="4" nameLocal="Selection" dataType="str" optional="true" privacy="public" contentType="str"/>
+</action>
+<action code="50" nameLocal="Element Value" catNameLocal="Scene" argCount="3">
+	<arg num="0" nameLocal="Scene Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Value" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="55" nameLocal="Element Back Colour" catNameLocal="Scene" argCount="4">
+	<arg num="0" nameLocal="Scene Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Colour" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="3" nameLocal="End Colour" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="56" nameLocal="Element Border" catNameLocal="Scene" argCount="4">
+	<arg num="0" nameLocal="Scene Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Width" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="3" nameLocal="Colour" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="65" nameLocal="Element Visibility" catNameLocal="Scene" argCount="4">
+	<arg num="0" nameLocal="Scene Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Element Match" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="3" nameLocal="Animation Time (MS)" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="300" nameLocal="Anchor" catNameLocal="Task" argCount="0"/>
+<action code="544" nameLocal="Timer Widget Control" catNameLocal="Tasker" argCount="2">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="End"/>
+		<option num="1" labelLocal="Pause"/>
+		<option num="2" labelLocal="Resume"/>
+		<option num="3" labelLocal="Reset"/>
+		<option num="4" labelLocal="Update"/>
+	</arg>
+</action>
+<action code="153" nameLocal="Import Data" catNameLocal="Tasker" argCount="3">
+	<arg num="0" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Task"/>
+		<option num="1" labelLocal="Configuration"/>
+	</arg>
+	<arg num="1" nameLocal="Source" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Variable"/>
+	</arg>
+	<arg num="2" nameLocal="Variable" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="546" nameLocal="Timer Widget Set" catNameLocal="Tasker" argCount="5">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Seconds" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="Minutes" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="3" nameLocal="Hours" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="4" nameLocal="Days" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="347" nameLocal="Test Tasker" catNameLocal="Tasker" argCount="3">
+	<arg num="0" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Action Available"/>
+		<option num="1" labelLocal="Event Available"/>
+		<option num="2" labelLocal="State Available"/>
+		<option num="3" labelLocal="Global Variables"/>
+		<option num="4" labelLocal="Local Variables"/>
+		<option num="5" labelLocal="Profiles"/>
+		<option num="6" labelLocal="Scenes"/>
+		<option num="7" labelLocal="Tasks"/>
+		<option num="8" labelLocal="Timer Widget Remaining"/>
+	</arg>
+	<arg num="1" nameLocal="Data" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Store Result In" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="140" nameLocal="Change Icon Set" catNameLocal="Tasker" argCount="2">
+	<arg num="0" nameLocal="Old" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="New" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="135" nameLocal="Goto" catNameLocal="Task" argCount="3">
+	<arg num="0" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Action Number"/>
+		<option num="1" labelLocal="Action Label"/>
+		<option num="2" labelLocal="Top of Loop"/>
+		<option num="3" labelLocal="End of Loop"/>
+		<option num="4" labelLocal="End of If"/>
+	</arg>
+	<arg num="1" nameLocal="Number" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="Label" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="37" nameLocal="If" catNameLocal="Task" argCount="0"/>
+<action code="43" nameLocal="Else" catNameLocal="Task" argCount="0"/>
+<action code="38" nameLocal="End If" catNameLocal="Task" argCount="0"/>
+<action code="39" nameLocal="For" catNameLocal="Task" argCount="2">
+	<arg num="0" nameLocal="Variable" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Items" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="40" nameLocal="End For" catNameLocal="Task" argCount="0"/>
+<action code="126" nameLocal="Return" catNameLocal="Task" argCount="2">
+	<arg num="0" nameLocal="Value" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Stop" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="131" nameLocal="JavaScript" catNameLocal="Code" argCount="4">
+	<arg num="0" nameLocal="Path" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Libraries" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Auto Exit" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="3" nameLocal="Timeout (Seconds)" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="129" nameLocal="JavaScriptlet" catNameLocal="Code" argCount="4">
+	<arg num="0" nameLocal="Code" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Libraries" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Auto Exit" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="3" nameLocal="Timeout (Seconds)" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="130" nameLocal="Perform Task" catNameLocal="Task" argCount="6">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Priority" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="Parameter 1 (%par1)" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="3" nameLocal="Parameter 2 (%par2)" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="4" nameLocal="Return Value Variable" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="5" nameLocal="Stop" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="159" nameLocal="Profile Status" catNameLocal="Tasker" argCount="2">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Set" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Off"/>
+		<option num="1" labelLocal="On"/>
+		<option num="2" labelLocal="Toggle"/>
+	</arg>
+</action>
+<action code="134" nameLocal="Query Action" catNameLocal="Tasker" argCount="1">
+	<arg num="0" nameLocal="Action" dataType="str" optional="true" privacy="public" contentType="str"/>
+</action>
+<action code="152" nameLocal="Set Widget Icon" catNameLocal="Tasker" argCount="2">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Icon" dataType="icon" optional="false" privacy="public" contentType="icon"/>
+</action>
+<action code="155" nameLocal="Set Widget Label" catNameLocal="Tasker" argCount="2">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Label" dataType="str" optional="true" privacy="public" contentType="str"/>
+</action>
+<action code="139" nameLocal="Disable" catNameLocal="Tasker" argCount="0"/>
+<action code="138" nameLocal="Set Tasker Icon" catNameLocal="Tasker" argCount="1">
+	<arg num="0" nameLocal="Icon" dataType="icon" optional="false" privacy="public" contentType="icon"/>
+</action>
+<action code="133" nameLocal="Set Tasker Pref" catNameLocal="Tasker" argCount="3">
+	<arg num="0" nameLocal="Set" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Service Check (MS)"/>
+		<option num="1" labelLocal="BT Scan Period"/>
+		<option num="2" labelLocal="Wifi Scan Period"/>
+		<option num="3" labelLocal="GPS Check Period"/>
+		<option num="4" labelLocal="Net Location Period"/>
+		<option num="5" labelLocal="GPS Check Timeout"/>
+		<option num="6" labelLocal="Display Off, All Checks"/>
+		<option num="7" labelLocal="Display Off, All Checks Timeout"/>
+		<option num="8" labelLocal="BT Check Min Timeout"/>
+		<option num="9" labelLocal="Wifi Check Min Timeout"/>
+		<option num="10" labelLocal="Camera Delay (MS)"/>
+		<option num="11" labelLocal="Cell Workaround"/>
+		<option num="12" labelLocal="Net/Cell Wake Screen"/>
+		<option num="13" labelLocal="Run In Foreground"/>
+		<option num="14" labelLocal="Accelerometer"/>
+		<option num="15" labelLocal="Proximity Sensor"/>
+		<option num="16" labelLocal="Light Sensor"/>
+		<option num="17" labelLocal="Pressure Sensor"/>
+		<option num="18" labelLocal="Temperature Sensor"/>
+		<option num="19" labelLocal="Humidity Sensor"/>
+		<option num="20" labelLocal="Magnetic Sensor"/>
+		<option num="21" labelLocal="Step Sensor"/>
+		<option num="22" labelLocal="Use Reliable Alarms"/>
+	</arg>
+	<arg num="1" nameLocal="Value" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="Value" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="137" nameLocal="Stop" catNameLocal="Task" argCount="2">
+	<arg num="0" nameLocal="With Error" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="1" nameLocal="Task" dataType="str" optional="true" privacy="public" contentType="str"/>
+</action>
+<action code="30" nameLocal="Wait" catNameLocal="Task" argCount="5">
+	<arg num="0" nameLocal="MS" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="Seconds" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="Minutes" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="3" nameLocal="Hours" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="4" nameLocal="Days" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="35" nameLocal="Wait Until" catNameLocal="Task" argCount="5">
+	<arg num="0" nameLocal="MS" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="1" nameLocal="Seconds" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="Minutes" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="3" nameLocal="Hours" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="4" nameLocal="Days" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="345" nameLocal="Test Variable" catNameLocal="Variables" argCount="3">
+	<arg num="0" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Length"/>
+	</arg>
+	<arg num="1" nameLocal="Data" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Store Result In" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="355" nameLocal="Array Push" catNameLocal="Variables" argCount="4">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Position" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="Value" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="3" nameLocal="Fill Spaces" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="356" nameLocal="Array Pop" catNameLocal="Variables" argCount="3">
+	<arg num="0" nameLocal="Variable" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Position" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="To Var" dataType="str" optional="true" privacy="public" contentType="str"/>
+</action>
+<action code="369" nameLocal="Array Process" catNameLocal="Variables" argCount="2">
+	<arg num="0" nameLocal="Variable" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Remove Duplicates"/>
+		<option num="1" labelLocal="Reverse"/>
+		<option num="2" labelLocal="Rotate Left"/>
+		<option num="3" labelLocal="Rotate Right"/>
+		<option num="4" labelLocal="Shuffle"/>
+		<option num="5" labelLocal="Sort Alpha"/>
+		<option num="6" labelLocal="Sort Alpha, Reverse"/>
+		<option num="7" labelLocal="Sort Alpha Caseless"/>
+		<option num="8" labelLocal="Sort Alpha Caseless, Reverse"/>
+		<option num="9" labelLocal="Sort Shortest First"/>
+		<option num="10" labelLocal="Sort Longest First"/>
+		<option num="11" labelLocal="Sort Numeric, Integer"/>
+		<option num="12" labelLocal="Sort Numeric, Floating-Point"/>
+		<option num="13" labelLocal="Squash"/>
+	</arg>
+</action>
+<action code="357" nameLocal="Array Clear" catNameLocal="Variables" argCount="1">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="549" nameLocal="Variable Clear" catNameLocal="Variables" argCount="2">
+	<arg num="0" nameLocal="Name" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Pattern Matching" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="596" nameLocal="Variable Convert" catNameLocal="Variables" argCount="3">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Function" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Bytes to Kilobytes"/>
+		<option num="1" labelLocal="Bytes to Megabytes"/>
+		<option num="2" labelLocal="Bytes to Gigabytes"/>
+		<option num="3" labelLocal="Date Time to Seconds"/>
+		<option num="4" labelLocal="Seconds to Date Time"/>
+		<option num="5" labelLocal="Seconds to Medium Date Time"/>
+		<option num="6" labelLocal="Seconds to Long Date Time"/>
+		<option num="7" labelLocal="HTML to Text"/>
+		<option num="8" labelLocal="Celsius to Fahrenheit"/>
+		<option num="9" labelLocal="Fahrenheit to Celsius"/>
+		<option num="10" labelLocal="Centimetres to Inches"/>
+		<option num="11" labelLocal="Inches to Centimetres"/>
+		<option num="12" labelLocal="Metres to Feet"/>
+		<option num="13" labelLocal="Feet to Metres"/>
+		<option num="14" labelLocal="Kilograms to Pounds"/>
+		<option num="15" labelLocal="Pounds to Kilograms"/>
+		<option num="16" labelLocal="Kilometres to Miles"/>
+		<option num="17" labelLocal="Miles to Kilometres"/>
+		<option num="18" labelLocal="URL Decode"/>
+		<option num="19" labelLocal="URL Encode"/>
+		<option num="20" labelLocal="Binary to Decimal"/>
+		<option num="21" labelLocal="Decimal to Binary"/>
+		<option num="22" labelLocal="Hex to Decimal"/>
+		<option num="23" labelLocal="Decimal to Hex"/>
+		<option num="24" labelLocal="Base64 Encode"/>
+		<option num="25" labelLocal="Base64 Decode"/>
+		<option num="26" labelLocal="To MD5 Digest"/>
+		<option num="27" labelLocal="To SHA1 Digest"/>
+		<option num="28" labelLocal="To Lower Case"/>
+		<option num="29" labelLocal="To Upper Case"/>
+		<option num="30" labelLocal="To Upper Case First"/>
+	</arg>
+	<arg num="2" nameLocal="Store Result In" dataType="str" optional="true" privacy="public" contentType="str"/>
+</action>
+<action code="890" nameLocal="Variable Subtract" catNameLocal="Variables" argCount="3">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Value" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="Wrap Around" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="888" nameLocal="Variable Add" catNameLocal="Variables" argCount="3">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Value" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="Wrap Around" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="592" nameLocal="Variable Join" catNameLocal="Variables" argCount="3">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Joiner" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Delete Parts" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="597" nameLocal="Variable Section" catNameLocal="Variables" argCount="5">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="From" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="Length" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="3" nameLocal="Adapt To Fit" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="4" nameLocal="Store Result In" dataType="str" optional="true" privacy="public" contentType="str"/>
+</action>
+<action code="595" nameLocal="Variable Query" catNameLocal="Variables" argCount="8">
+	<arg num="0" nameLocal="Title" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Variable" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Input Type" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Normal Text"/>
+		<option num="1" labelLocal="Caps / Word"/>
+		<option num="2" labelLocal="Caps / All"/>
+		<option num="3" labelLocal="Numeric / Decimal"/>
+		<option num="4" labelLocal="Numeric / Integer"/>
+		<option num="5" labelLocal="Password"/>
+		<option num="6" labelLocal="Phone Number"/>
+		<option num="7" labelLocal="Passcode"/>
+	</arg>
+	<arg num="3" nameLocal="Default" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="4" nameLocal="Background Image" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="5" nameLocal="Layout" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="6" nameLocal="Timeout (Seconds)" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="7" nameLocal="Show Over Keyguard" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="598" nameLocal="Variable Search Replace" catNameLocal="Variables" argCount="8">
+	<arg num="0" nameLocal="Variable" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Search" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Ignore Case" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="3" nameLocal="Multi-Line" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="4" nameLocal="One Match Only" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="5" nameLocal="Store Matches In" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="6" nameLocal="Replace Matches" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="7" nameLocal="Replace With" dataType="str" optional="true" privacy="public" contentType="str"/>
+</action>
+<action code="547" nameLocal="Variable Set" catNameLocal="Variables" argCount="4">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="To" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Do Maths" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+	<arg num="3" nameLocal="Append" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="590" nameLocal="Variable Split" catNameLocal="Variables" argCount="3">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Splitter" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="Delete Base" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="545" nameLocal="Variable Randomize" catNameLocal="Variables" argCount="3">
+	<arg num="0" nameLocal="Name" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Min" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="2" nameLocal="Max" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="558" nameLocal="Android Notifier" catNameLocal="3rd Party" argCount="2">
+	<arg num="0" nameLocal="Title" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Message" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="371" nameLocal="Astrid" catNameLocal="3rd Party" argCount="1">
+	<arg num="0" nameLocal="Cmd" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Google Tasks Sync"/>
+		<option num="1" labelLocal="Producteev Sync"/>
+		<option num="2" labelLocal="Act.fm Sync"/>
+	</arg>
+</action>
+<action code="555" nameLocal="BeyondPod" catNameLocal="3rd Party" argCount="1">
+	<arg num="0" nameLocal="Cmd" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Start Smart Play"/>
+		<option num="1" labelLocal="Update Smart Play"/>
+		<option num="2" labelLocal="Play"/>
+		<option num="3" labelLocal="Pause"/>
+		<option num="4" labelLocal="Play Previous"/>
+		<option num="5" labelLocal="Skip Forward"/>
+		<option num="6" labelLocal="Skip Backward"/>
+		<option num="7" labelLocal="Skip To End"/>
+		<option num="8" labelLocal="Play Next"/>
+		<option num="9" labelLocal="Speed Normal"/>
+		<option num="10" labelLocal="Speed x1"/>
+		<option num="11" labelLocal="Speed x2"/>
+	</arg>
+</action>
+<action code="568" nameLocal="DailyRoads Voyager" catNameLocal="3rd Party" argCount="1">
+	<arg num="0" nameLocal="Cmd" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Start Video"/>
+		<option num="1" labelLocal="Stop Video"/>
+		<option num="2" labelLocal="Retain Video"/>
+		<option num="3" labelLocal="Start Photo"/>
+		<option num="4" labelLocal="Stop Photo"/>
+		<option num="5" labelLocal="Stop App"/>
+	</arg>
+</action>
+<action code="599" nameLocal="Due Today" catNameLocal="3rd Party" argCount="1">
+	<arg num="0" nameLocal="Cmd" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Sync"/>
+	</arg>
+</action>
+<action code="911" nameLocal="Gentle Alarm" catNameLocal="3rd Party" argCount="2">
+	<arg num="0" nameLocal="Name" dataType="str" optional="true" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="456" nameLocal="JD APN" catNameLocal="3rd Party" argCount="1">
+	<arg num="0" nameLocal="Set" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Disable APNs"/>
+		<option num="1" labelLocal="Enable APNs"/>
+		<option num="2" labelLocal="Juice Defender Control"/>
+	</arg>
+</action>
+<action code="395" nameLocal="JD Status" catNameLocal="3rd Party" argCount="1">
+	<arg num="0" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+<action code="556" nameLocal="GrazeRSS" catNameLocal="3rd Party" argCount="1">
+	<arg num="0" nameLocal="Cmd" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Sync"/>
+		<option num="1" labelLocal="Cancel Sync"/>
+		<option num="2" labelLocal="Sync Changed Only"/>
+	</arg>
+</action>
+<action code="643" nameLocal="OfficeTalk" catNameLocal="3rd Party" argCount="2">
+	<arg num="0" nameLocal="Cmd" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Set Availability"/>
+		<option num="1" labelLocal="Login"/>
+		<option num="2" labelLocal="Logout"/>
+	</arg>
+	<arg num="1" nameLocal="Status" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Available"/>
+		<option num="1" labelLocal="Busy"/>
+		<option num="2" labelLocal="Away"/>
+		<option num="3" labelLocal="Offline"/>
+	</arg>
+</action>
+<action code="442" nameLocal="SleepBot" catNameLocal="3rd Party" argCount="2">
+	<arg num="0" nameLocal="Punch" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="In"/>
+		<option num="1" labelLocal="Out"/>
+	</arg>
+	<arg num="1" nameLocal="Note" dataType="str" optional="true" privacy="public" contentType="str"/>
+</action>
+<action code="553" nameLocal="SMS Backup+" catNameLocal="3rd Party" argCount="0"/>
+<action code="444" nameLocal="TeslaLED" catNameLocal="3rd Party" argCount="2">
+	<arg num="0" nameLocal="Set" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Off"/>
+		<option num="1" labelLocal="On"/>
+		<option num="2" labelLocal="Toggle"/>
+	</arg>
+	<arg num="1" nameLocal="Strobe (Hertz)" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="458" nameLocal="WidgetLocker" catNameLocal="3rd Party" argCount="1">
+	<arg num="0" nameLocal="Cmd" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="Enable"/>
+		<option num="1" labelLocal="Disable"/>
+		<option num="2" labelLocal="Suspend"/>
+		<option num="3" labelLocal="Resume"/>
+		<option num="4" labelLocal="Activate"/>
+		<option num="5" labelLocal="Unlock"/>
+	</arg>
+</action>
+<action code="794" nameLocal="Zoom Position" catNameLocal="Zoom" argCount="4">
+	<arg num="0" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Orientation" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="All"/>
+		<option num="1" labelLocal="Portrait"/>
+		<option num="2" labelLocal="Landscape"/>
+	</arg>
+	<arg num="2" nameLocal="X" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="3" nameLocal="Y" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="795" nameLocal="Zoom Size" catNameLocal="Zoom" argCount="4">
+	<arg num="0" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Orientation" dataType="int" optional="false" privacy="public" contentType="option">
+		<option num="0" labelLocal="All"/>
+		<option num="1" labelLocal="Portrait"/>
+		<option num="2" labelLocal="Landscape"/>
+	</arg>
+	<arg num="2" nameLocal="Width" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+	<arg num="3" nameLocal="Height" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="793" nameLocal="Zoom State" catNameLocal="Zoom" argCount="2">
+	<arg num="0" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="State" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="761" nameLocal="Zoom Image" catNameLocal="Zoom" argCount="2">
+	<arg num="0" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="URI" dataType="str" optional="true" privacy="public" contentType="str"/>
+</action>
+<action code="760" nameLocal="Zoom Alpha" catNameLocal="Zoom" argCount="2">
+	<arg num="0" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Set" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="740" nameLocal="Zoom Text" catNameLocal="Zoom" argCount="2">
+	<arg num="0" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Text" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="741" nameLocal="Zoom Text Size" catNameLocal="Zoom" argCount="2">
+	<arg num="0" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Text Size" dataType="int" optional="false" privacy="public" contentType="valueOrVariable"/>
+</action>
+<action code="742" nameLocal="Zoom Text Colour" catNameLocal="Zoom" argCount="2">
+	<arg num="0" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Colour" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="762" nameLocal="Zoom Colour" catNameLocal="Zoom" argCount="3">
+	<arg num="0" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Colour" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="2" nameLocal="End Colour" dataType="str" optional="false" privacy="public" contentType="str"/>
+</action>
+<action code="721" nameLocal="Zoom Visibility" catNameLocal="Zoom" argCount="2">
+	<arg num="0" nameLocal="Element" dataType="str" optional="false" privacy="public" contentType="str"/>
+	<arg num="1" nameLocal="Set" dataType="bool" optional="false" privacy="public" contentType="bool"/>
+</action>
+</datadef>
