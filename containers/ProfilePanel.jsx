@@ -5,7 +5,8 @@ import { List as ImmList, Map } from "immutable";
 import { addProfile } from "../actions/base";
 
 const ProfilePanel = ({ profiles, onAddProfile, style }) => (
-  <ListPanel listItems={profiles} listTitle="Profiles" emptyMessage="No profiles added" addItem={onAddProfile} style />
+  <ListPanel listItems={profiles} listTitle="Profiles" emptyMessage="No profiles added" addItem={onAddProfile}
+    containerStyle={style} />
 )
 
 ProfilePanel.propTypes = {

@@ -5,7 +5,7 @@ import { List as ImmList, Map } from "immutable";
 import { addTask } from "../actions/base";
 
 const TaskPanel = ({ tasks, onAddTask, style }) => (
-  <ListPanel listItems={tasks} listTitle="Tasks" emptyMessage="No tasks added" addItem={onAddTask} style />
+  <ListPanel listItems={tasks} listTitle="Tasks" emptyMessage="No tasks added" addItem={onAddTask} containerStyle={style} />
 )
 
 TaskPanel.propTypes = {
